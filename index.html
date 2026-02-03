@@ -27,7 +27,8 @@
 
 <div class="grid">
   <div class="card" onclick="openModal(0)">
-    <img src="images/31ece26e-e5e1-4c16-85f7-489487d0365c.jpg" alt="La verdadera enfermedad" loading="lazy" data-title="La verdadera enfermedad">
+    <!-- nubes -> La verdadera enfermedad -->
+    <img src="images/cuenta_regresiva.jpg" alt="La verdadera enfermedad" loading="lazy" data-title="La verdadera enfermedad">
     <div class="card-title">La verdadera enfermedad</div>
   </div>
 
@@ -42,12 +43,14 @@
   </div>
 
   <div class="card" onclick="openModal(3)">
-    <img src="images/ed9e2734-4567-467a-80a5-c48b1d47cd02.jpg" alt="Poema número 1" loading="lazy" data-title="Poema número 1">
+    <!-- árbol -> Poema número 1 -->
+    <img src="images/31ece26e-e5e1-4c16-85f7-489487d0365c.jpg" alt="Poema número 1" loading="lazy" data-title="Poema número 1">
     <div class="card-title">Poema número 1</div>
   </div>
 
   <div class="card" onclick="openModal(4)">
-    <img src="images/cuenta_regresiva.jpg" alt="La cuenta regresiva" loading="lazy" data-title="La cuenta regresiva">
+    <!-- el que antes decía 'Poema número 1' -> ahora Cuenta regresiva -->
+    <img src="images/ed9e2734-4567-467a-80a5-c48b1d47cd02.jpg" alt="La cuenta regresiva" loading="lazy" data-title="La cuenta regresiva">
     <div class="card-title">La cuenta regresiva</div>
   </div>
 </div>
@@ -236,7 +239,7 @@ y a las diez... ya no queda nada más.`
   function closeModal(e){ if(e.target.id === "modalOverlay") hideModal(); }
   document.addEventListener('keydown', e => { if(e.key === "Escape") hideModal(); });
 
-  // si una imagen no carga, muestra marcador legible en lugar del icono roto
+  // fallback visual si alguna imagen no carga
   document.querySelectorAll('.card img').forEach(img => {
     img.addEventListener('error', () => {
       const wrapper = img.parentElement;
