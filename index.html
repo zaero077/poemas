@@ -25,41 +25,7 @@
 <body>
 <h1>Poemas</h1>
 
-<div class="grid">
-  <div class="card" onclick="openModal(0)">
-    <!-- nubes -> La verdadera enfermedad -->
-    <img src="images/cuenta_regresiva.jpg" alt="La verdadera enfermedad" loading="lazy" data-title="La verdadera enfermedad">
-    <div class="card-title">La verdadera enfermedad</div>
-  </div>
-
-  <div class="card" onclick="openModal(1)">
-    <img src="images/6296a79a-91a0-4643-aed7-891a62a99654.jpg" alt="Sobre todo ahí" loading="lazy" data-title="Sobre todo ahí">
-    <div class="card-title">Sobre todo ahí</div>
-  </div>
-
-  <div class="card" onclick="openModal(2)">
-    <img src="images/c4463724-63b8-4249-9681-f91fb84a4975.jpg" alt="Te amo negándote" loading="lazy" data-title="Te amo negándote">
-    <div class="card-title">Te amo negándote</div>
-  </div>
-
-  <div class="card" onclick="openModal(3)">
-    <!-- árbol -> Poema número 1 (nombre corregido según tu archivo) -->
-    <img src="images/31ece26e-e5e1-41c6-857f-489487d0365c.jpg" alt="Poema número 1" loading="lazy" data-title="Poema número 1">
-    <div class="card-title">Poema número 1</div>
-  </div>
-
-  <div class="card" onclick="openModal(4)">
-    <!-- el que antes decía 'Poema número 1' -> ahora Cuenta regresiva -->
-    <img src="images/ed9e2734-4567-467a-80a5-c48b1d47cd02.jpg" alt="La cuenta regresiva" loading="lazy" data-title="La cuenta regresiva">
-    <div class="card-title">La cuenta regresiva</div>
-  </div>
-
-  <div class="card" onclick="openModal(5)">
-    <!-- nuevo poema ¿Quién soy? -->
-    <img src="images/Quien_Soy.png" alt="¿Quién soy?" loading="lazy" data-title="¿Quién soy?">
-    <div class="card-title">¿Quién soy?</div>
-  </div>
-</div>
+<div class="grid" id="grid"></div>
 
 <div class="modal-overlay" id="modalOverlay" onclick="closeModal(event)">
   <div class="modal" id="modal" role="dialog" aria-modal="true" tabindex="-1">
@@ -70,8 +36,351 @@
 </div>
 
 <script>
-  const poems = [
-`Caminan en fila, grises y quietos
+/* Datos de poemas — el orden del array determina el orden en la página */
+const poemsData = [
+  {
+    title: "Poema número 1",
+    image: "images/31ece26e-e5e1-41c6-857f-489487d0365c.jpg",
+    text: `Te amo cuando te quedás,
+cuando el mundo afloja un poco
+y no hace falta explicarlo todo.
+
+Te amo en lo simple:
+en la risa que no busca sentido,
+en el silencio que no pesa,
+en ese estar que no exige pruebas.
+
+Te amo con lo que soy ahora,
+no con lo que prometo ser.
+Con mis días torpes,
+con mis aciertos pequeños
+y mis errores sin épica.
+
+Te amo desde lo cotidiano:
+desde el mate frío olvidado en la mesa,
+desde las palabras que no decimos
+porque ya se entienden.
+
+Te amo cuando coincidimos
+sin esfuerzo,
+cuando no hay que ganar ni perder,
+cuando nadie se salva
+porque nadie está en peligro.
+
+Te amo sin urgencia,
+sin dramatismos,
+sin esa necesidad de arder para existir.
+
+Te amo como se ama lo que acompaña
+y no empuja.`
+  },
+
+  {
+    title: "Poema número 2",
+    image: "images/Poema_2.jpg",
+    text: `No sé si te amo
+o si te pienso demasiado
+y eso se parece al amor.
+
+A veces te quiero lejos
+para poder extrañarte bien,
+otras te quiero cerca
+aunque me dé miedo tocarte
+y descubrir que sos real.
+
+Te amo cuando no estás,
+porque ahí no me contradecís,
+y te amo cuando volvés
+aunque me arruines la idea
+que había armado de vos.
+
+Quisiera prometerte todo
+pero apenas puedo prometerte esto:
+que voy a dudar incluso cuando te bese,
+que voy a temblar incluso cuando te tenga,
+que no voy a saber soltarte
+ni siquiera cuando diga que ya fue.
+
+Mi amor por vos
+no es limpio ni seguro,
+es una habitación con la luz prendida
+y las cortinas cerradas.
+
+Te amo sin entenderte
+y sin entenderme,
+como se ama lo que no se puede ordenar.
+
+Si algún día dejo de quererte
+va a ser mintiendo,
+y si algún día me quedo
+va a ser con miedo.
+
+Porque amarte es esto:
+querer huir
+y aun así
+sentarse a tu lado
+como si no existiera otro lugar.`
+  },
+
+  {
+    title: "Poema número 3",
+    image: "images/Poema_3.jpg",
+    text: `Te amo
+como se ama algo que puede perderse
+en cualquier momento.
+
+No con calma,
+no con fe,
+sino con esa urgencia torpe
+de quien abraza sabiendo
+que después va a doler el vacío.
+
+Te amo cuando discutimos
+porque ahí no hay máscaras,
+cuando decís cosas que no pensás
+y yo escucho cosas que no dijiste.
+
+Te amo incluso cuando te vas,
+sobre todo cuando te vas,
+porque ahí mi amor
+tiene que inventarte para sobrevivir.
+
+No te prometo quedarme entero.
+A veces voy a quererte mal,
+a veces tarde,
+a veces con miedo de mirarte
+demasiado a los ojos.
+
+Pero si me voy
+va a ser dejando algo mío en vos:
+una costumbre,
+una canción que no pediste,
+un recuerdo que no te pertenece
+pero igual va a volver de noche.
+
+Mi amor no sabe ser prolijo.
+Se mete donde no debe,
+insiste cuando debería callar,
+te elige incluso cuando entiende
+que elegirte es perder un poco.
+
+Si alguna vez te canso,
+no es por falta de amor,
+es porque amar así
+quema.
+
+Y aun así
+volvería a empezar,
+con menos orgullo
+y la misma herida,
+porque amarte no fue un error:
+fue un riesgo
+que acepté
+con los ojos abiertos.`
+  },
+
+  {
+    title: "Poema número 4",
+    image: "images/Poema_4.jpg",
+    text: `Amo tu cuerpo
+no como se desea algo ajeno,
+sino como se aprende un territorio
+a fuerza de quedarse.
+
+Amo tus hombros
+cuando cargan el día
+y aun así me reciben.
+Ahí empieza mi descanso.
+
+Amo tu cuello,
+esa frontera frágil
+donde tu voz se vuelve piel
+y el silencio se vuelve tibio.
+
+Amo tu espalda
+porque no me mira
+y aun así confía.
+Es un mapa que no pregunta
+quién lo sigue.
+
+Amo tus manos
+cuando no saben qué hacer
+y se quedan quietas,
+como si tocar fuera demasiado
+y no tocar también doliera.
+
+Amo tu pecho
+cuando respira lento
+y me recuerda
+que todavía estás acá,
+que no todo se va tan rápido.
+
+Amo tu cintura
+porque ahí el mundo
+cambia de forma,
+porque ahí mi nombre
+pierde importancia.
+
+Amo tus muslos
+con una devoción cansada,
+como se ama lo que sostiene
+sin pedir explicaciones.
+
+Amo tus piernas
+porque saben irse
+pero eligen quedarse.
+
+Amo tu cuerpo entero
+cuando no es perfecto,
+cuando se tensa,
+cuando duda,
+cuando se ofrece
+sin prometer eternidad.
+
+No amo tu cuerpo
+para poseerlo,
+lo amo porque me permite
+habitarte
+aunque sea un rato.
+
+Y si algún día te vas,
+mi amor no va a recordar
+tu ausencia,
+sino el milagro simple
+de haber tenido un lugar
+donde quedarse.`
+  },
+
+  {
+    title: "Poema número 5",
+    image: "images/Poema_5.jpg",
+    text: `A veces siento orgullo
+no como fuerza,
+sino como una piedra
+mal puesta en la boca.
+
+No me impide quererte,
+me impide decirlo a tiempo.
+
+Sé cuándo debería pedir perdón,
+lo sé con una claridad humillante,
+pero algo en mí se queda quieto,
+mirando cómo el momento pasa
+como un tren que todavía podría alcanzar
+si corriera un poco más.
+
+No es que no quiera ceder,
+es que el orgullo me habla bajito
+y me convence
+de que todavía hay margen,
+de que después va a doler menos.
+
+Siempre lo venzo,
+eso es verdad.
+Siempre termino llegando
+con el perdón en la mano,
+desarmado,
+honesto,
+casi infantil.
+
+Pero hay veces
+en que llego tarde.
+
+Y ese retraso
+no se nota enseguida.
+Se queda flotando entre nosotros,
+como una palabra que no se dijo
+cuando todavía podía sanar.
+
+Te pido perdón
+cuando el silencio ya se enfrió,
+cuando tu mirada aprendió
+a no esperarlo.
+
+No es soberbia,
+es miedo con traje de orgullo.
+Miedo a quedar chico,
+a decir “perdón”
+y que ya no alcance.
+
+Si supieras cuánto me pesa
+no haberlo dicho antes,
+cuántas veces el orgullo
+no fue victoria
+sino demora.
+
+Te amo incluso ahí,
+cuando fallo en el tiempo,
+cuando el perdón llega
+con pasos cansados
+pero sinceros.
+
+Porque aunque a veces tarde,
+siempre vuelvo,
+y siempre es verdad
+cuando finalmente digo
+perdón.`
+  },
+
+  {
+    title: "Poema número 6",
+    image: "images/Poema_6.jpg",
+    text: `Ahora no sé qué siento.
+Eso es lo único claro.
+
+Tengo la boca llena de cosas
+que no dije,
+y las manos vacías
+de lo que pensé que iba a quedar.
+
+No te quiero,
+me repito,
+como quien se da una orden
+que no sabe cumplir.
+
+Después te pienso
+sin querer
+y algo se me cae adentro.
+
+No es llanto,
+no es bronca,
+es esa presión rara
+cuando el pecho
+no encuentra postura.
+
+Siento orgullo
+y me da vergüenza.
+Siento ganas de irme
+y miedo de que te vayas.
+
+Quisiera pedirte perdón
+pero no sé por qué,
+y eso también duele.
+
+Hay un momento
+en que ya no te amo,
+o eso creo.
+Y otro, casi al mismo tiempo,
+en que todavía sí.
+
+No se contradicen,
+conviven.
+
+Ahora mismo
+no te pierdo del todo
+ni te tengo.
+Estoy en ese lugar incómodo
+donde el amor no alcanza
+pero tampoco se va.
+
+Y eso,
+eso es lo que más duele.`
+  },
+
+  {
+    title: "La verdadera enfermedad",
+    image: "images/cuenta_regresiva.jpg",
+    text: `Caminan en fila, grises y quietos
 Siguiendo un guion que no tiene secretos.
 Cumplen horarios, tragan la urgencia
 Y llaman "vida" a su propia ausencia.
@@ -89,9 +398,13 @@ Que se queden ellos con su falsa verdad
 Esa calma mentirosa que invita a callar.
 Bendito el que aguanta
 En su soledad
-Y se niega a estar enfermo de normalidad.`,
+Y se niega a estar enfermo de normalidad.`
+  },
 
-`Te amo cuando huyo,
+  {
+    title: "Sobre todo ahí",
+    image: "images/6296a79a-91a0-4643-aed7-891a62a99654.jpg",
+    text: `Te amo cuando huyo,
 porque siempre corro hacia vos sin darme cuenta.
 
 Te amo con la duda,
@@ -130,9 +443,13 @@ Te amo incluso cuando digo que no.
 Sobre todo ahí.
 
 Porque si no te amara,
-no necesitaría negarlo.`,
+no necesitaría negarlo.`
+  },
 
-`Te amo con la violencia de un mar en calma,
+  {
+    title: "Te amo negándote",
+    image: "images/c4463724-63b8-4249-9681-f91fb84a4975.jpg",
+    text: `Te amo con la violencia de un mar en calma,
 con la paz mentirosa que me rompe el alma.
 Te amo negándote, para que seas más cierto,
 te busco en la vida sintiéndome muerto.
@@ -153,42 +470,13 @@ Es un error perfecto, una herida que sana,
 amarte hoy con la fuerza de quien no te ama mañana.
 
 Y sin embargo te amo, estúpidamente fiel,
-tomando veneno creyendo que es miel.`,
+tomando veneno creyendo que es miel.`
+  },
 
-`Te amo cuando te quedás,
-cuando el mundo afloja un poco
-y no hace falta explicarlo todo.
-
-Te amo en lo simple:
-en la risa que no busca sentido,
-en el silencio que no pesa,
-en ese estar que no exige pruebas.
-
-Te amo con lo que soy ahora,
-no con lo que prometo ser.
-Con mis días torpes,
-con mis aciertos pequeños
-y mis errores sin épica.
-
-Te amo desde lo cotidiano:
-desde el mate frío olvidado en la mesa,
-desde las palabras que no decimos
-porque ya se entienden.
-
-Te amo cuando coincidimos
-sin esfuerzo,
-cuando no hay que ganar ni perder,
-cuando nadie se salva
-porque nadie está en peligro.
-
-Te amo sin urgencia,
-sin dramatismos,
-sin esa necesidad de arder para existir.
-
-Te amo como se ama lo que acompaña
-y no empuja.`,
-
-`Recién llegaste y ya estás mirando la puerta,
+  {
+    title: "La cuenta regresiva",
+    image: "images/ed9e2734-4567-467a-80a5-c48b1d47cd02.jpg",
+    text: `Recién llegaste y ya estás mirando la puerta,
 me das pedazos de tiempo, una cuota de vos,
 y yo me quedo con la pregunta abierta
 mientras espero que sea una broma tu adiós.
@@ -217,9 +505,13 @@ Vos te vas liviana, yo me quedo prisionero,
 contando los minutos como un loco.
 
 Porque a las nueve te vas,
-y a las diez... ya no queda nada más.`,
+y a las diez... ya no queda nada más.`
+  },
 
-`El cuerpo siente hambre.
+  {
+    title: "¿Quién soy?",
+    image: "images/Quien_Soy.jpg",
+    text: `El cuerpo siente hambre.
 La mente insiste en una idea.
 A veces se queda,
 a veces se vuelve obsesión.
@@ -269,46 +561,62 @@ Quizás soy eso que está
 antes de la pregunta.
 Y por eso
 nunca puede ser respuesta.`
-  ];
-
-  const titles = [
-    "La verdadera enfermedad",
-    "Sobre todo ahí",
-    "Te amo negándote",
-    "Poema número 1",
-    "La cuenta regresiva",
-    "¿Quién soy?"
-  ];
-
-  function openModal(index){
-    document.getElementById("modalTitle").textContent = titles[index];
-    document.getElementById("modalText").textContent = poems[index];
-    const overlay = document.getElementById("modalOverlay");
-    overlay.style.display = "flex";
-    const modal = document.getElementById("modal");
-    setTimeout(()=> modal.focus(), 10);
-    overlay.setAttribute('aria-hidden','false');
   }
-  function hideModal(){
-    const overlay = document.getElementById("modalOverlay");
-    overlay.style.display = "none";
-    overlay.setAttribute('aria-hidden','true');
-  }
-  function closeModal(e){ if(e.target.id === "modalOverlay") hideModal(); }
-  document.addEventListener('keydown', e => { if(e.key === "Escape") hideModal(); });
+];
 
-  // fallback visual si alguna imagen no carga
-  document.querySelectorAll('.card img').forEach(img => {
-    img.addEventListener('error', () => {
-      const wrapper = img.parentElement;
+/* Render grid en el orden del array */
+const grid = document.getElementById('grid');
+
+poemsData.forEach((p, i) => {
+  const card = document.createElement('div');
+  card.className = 'card';
+  card.onclick = () => openModal(i);
+
+  const img = document.createElement('img');
+  img.src = p.image;
+  img.alt = p.title;
+  img.loading = 'lazy';
+  img.setAttribute('data-title', p.title);
+
+  img.addEventListener('error', () => {
+    if (img.parentElement) {
       img.remove();
       const placeholder = document.createElement('div');
       placeholder.className = 'img-missing';
-      placeholder.innerText = 'Imagen no encontrada:\n' + (img.getAttribute('data-title') || img.alt || '(sin nombre)');
-      wrapper.insertBefore(placeholder, wrapper.firstChild);
-      console.error('Imagen no encontrada ->', img.getAttribute('src'));
-    });
+      placeholder.innerText = 'Imagen no encontrada:\n' + p.title;
+      card.insertBefore(placeholder, card.firstChild);
+      console.error('Imagen no encontrada ->', p.image);
+    }
   });
+
+  const titleDiv = document.createElement('div');
+  titleDiv.className = 'card-title';
+  titleDiv.textContent = p.title;
+
+  card.appendChild(img);
+  card.appendChild(titleDiv);
+  grid.appendChild(card);
+});
+
+/* Modal logic */
+function openModal(index){
+  const p = poemsData[index];
+  document.getElementById("modalTitle").textContent = p.title;
+  document.getElementById("modalText").textContent = p.text;
+  const overlay = document.getElementById("modalOverlay");
+  overlay.style.display = "flex";
+  const modal = document.getElementById("modal");
+  setTimeout(()=> modal.focus(), 10);
+  overlay.setAttribute('aria-hidden','false');
+}
+function hideModal(){
+  const overlay = document.getElementById("modalOverlay");
+  overlay.style.display = "none";
+  overlay.setAttribute('aria-hidden','true');
+}
+function closeModal(e){ if(e.target.id === "modalOverlay") hideModal(); }
+document.addEventListener('keydown', e => { if(e.key === "Escape") hideModal(); });
 </script>
 </body>
+</html>
 </html>
