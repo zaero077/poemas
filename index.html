@@ -1,42 +1,148 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="utf-8" />
   <title>Poemas</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <style>
-    body { margin: 0; font-family: "Georgia", serif; background: #0f0f0f; color: #eee; }
-    h1 { text-align: center; padding: 40px 20px 20px; font-weight: 400; letter-spacing: 2px; }
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; padding: 40px; max-width: 1200px; margin: auto; }
-    .card { position: relative; cursor: pointer; overflow: hidden; border-radius: 8px; aspect-ratio: 4 / 3; background: #000; display:flex; align-items:stretch; }
-    .card img { width:100%; height:100%; object-fit: contain; transition:transform .35s ease; display:block; padding:8px; background:#000; }
-    .card:hover img { transform: scale(1.02); }
-    .card-title { position:absolute; bottom:0; width:100%; padding:20px; background: linear-gradient(transparent, rgba(0,0,0,0.85)); font-size:18px; letter-spacing:1px; }
-    .img-missing { display:flex; align-items:center; justify-content:center; background:#111; color:#ddd; font-family:Georgia, serif; font-size:16px; padding:12px; text-align:center; }
-    .modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.85); backdrop-filter: blur(4px); display: none; justify-content: center; align-items: flex-start; padding: 24px; z-index: 1000; overflow: auto; }
-    .modal { background:#121212; max-width:700px; width:100%; max-height:calc(100vh - 48px); overflow-y:auto; padding:40px; border-radius:10px; box-shadow:0 0 40px rgba(0,0,0,0.7); animation: fadeIn .3s ease; position:relative; outline:none; }
-    .modal h2 { margin-top:0; font-weight:400; letter-spacing:1px; }
-    .modal pre { white-space: pre-wrap; line-height:1.7; font-family:"Georgia", serif; font-size:16px; margin:0; }
-    .close-btn { position:absolute; right:18px; top:18px; background:transparent; border:1px solid rgba(255,255,255,0.08); color:#eee; padding:6px 10px; border-radius:6px; cursor:pointer; }
-    @keyframes fadeIn { from {opacity:0; transform:scale(.96)} to {opacity:1; transform:scale(1)} }
-    @media (max-width:600px){ .modal { padding:25px } }
+    :root { --bg:#0f0f0f; --card-bg:#000; --muted:#ddd; --text:#eee; }
+    body{ margin:0; font-family:Georgia, serif; background:var(--bg); color:var(--text); }
+    h1{ text-align:center; padding:40px 20px 20px; font-weight:400; letter-spacing:2px; }
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:24px;
+      padding:40px;
+      max-width:1200px;
+      margin:0 auto;
+    }
+
+    .card{
+      position:relative;
+      cursor:pointer;
+      border-radius:8px;
+      background:var(--card-bg);
+      aspect-ratio:4/3;
+      display:flex;
+      align-items:stretch;
+      overflow:visible; /* clipping handled by .img-wrap */
+    }
+
+    /* CORRECCIÓN: el wrapper hace el clipping para img/video/canvas */
+    .img-wrap{
+      width:100%;
+      height:100%;
+      overflow:hidden;
+      border-radius:8px;
+      position:relative;
+      display:block;
+      background:#000;
+    }
+
+    .img-wrap img,
+    .img-wrap video,
+    .img-wrap canvas{
+      display:block;
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      -webkit-backface-visibility:hidden;
+      transform-origin:center;
+      will-change:transform,opacity;
+    }
+
+    .card-title{
+      position:absolute;
+      bottom:0;
+      width:100%;
+      padding:20px;
+      background:linear-gradient(transparent, rgba(0,0,0,0.85));
+      font-size:18px;
+      letter-spacing:1px;
+    }
+
+    .img-missing{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:#111;
+      color:var(--muted);
+      font-family:Georgia, serif;
+      font-size:16px;
+      padding:12px;
+      text-align:center;
+    }
+
+    .modal-overlay{
+      position:fixed;
+      inset:0;
+      display:none;
+      justify-content:center;
+      align-items:flex-start;
+      padding:24px;
+      background:rgba(0,0,0,0.85);
+      z-index:1000;
+      overflow:auto;
+      backdrop-filter:blur(4px);
+    }
+
+    .modal{
+      background:#121212;
+      max-width:700px;
+      width:100%;
+      max-height:calc(100vh - 48px);
+      overflow-y:auto;
+      padding:40px;
+      border-radius:10px;
+      box-shadow:0 0 40px rgba(0,0,0,0.7);
+      animation:fadeIn .25s ease;
+      position:relative;
+    }
+
+    .modal h2{ margin-top:0; font-weight:400; }
+    .modal pre{ white-space:pre-wrap; line-height:1.7; font-family:Georgia, serif; font-size:16px; margin:0; }
+    .close-btn{ position:absolute; right:18px; top:18px;
+      background:transparent; border:1px solid rgba(255,255,255,0.08);
+      color:var(--text); padding:6px 10px; border-radius:6px; cursor:pointer; }
+
+    @keyframes fadeIn{ from{opacity:0; transform:scale(.98)} to{opacity:1; transform:scale(1)} }
+    @media (max-width:600px){ .modal{ padding:25px } }
   </style>
 </head>
 <body>
-<h1>Poemas</h1>
+  <h1>Poemas</h1>
 
-<div class="grid" id="grid"></div>
+  <div class="grid" id="grid" aria-live="polite"></div>
 
-<div class="modal-overlay" id="modalOverlay" onclick="closeModal(event)">
-  <div class="modal" id="modal" role="dialog" aria-modal="true" tabindex="-1">
-    <button class="close-btn" onclick="hideModal()" aria-label="Cerrar">Cerrar</button>
-    <h2 id="modalTitle"></h2>
-    <pre id="modalText"></pre>
+  <div class="modal-overlay" id="modalOverlay" onclick="closeModal(event)">
+    <div class="modal" id="modal" role="dialog" aria-modal="true" tabindex="-1">
+      <button class="close-btn" onclick="hideModal()" aria-label="Cerrar">Cerrar</button>
+      <h2 id="modalTitle"></h2>
+      <pre id="modalText"></pre>
+    </div>
   </div>
-</div>
 
 <script>
-/* Datos de poemas — el orden del array determina el orden en la página */
+/*
+  index.html completo con todos los poemas que me pasaste.
+  Asegúrate de colocar las imágenes en la carpeta images/ con los nombres exactos:
+  - images/31ece26e-e5e1-41c6-857f-489487d0365c.jpg  (Poema número 1, árbol)
+  - images/Poema_2.jpg
+  - images/Poema_3.jpg
+  - images/Poema_4.jpg
+  - images/Poema_5.jpg
+  - images/Poema_6.jpg
+  - images/Poema_7.png
+  - images/Para_Mamá.png
+  - images/cuenta_regresiva.jpg
+  - images/6296a79a-91a0-4643-aed7-891a62a99654.jpg
+  - images/c4463724-63b8-4249-9681-f91fb84a4975.jpg
+  - images/ed9e2734-4567-467a-80a5-c48b1d47cd02.jpg
+  - images/Quien_Soy.jpg
+  - images/Al_Lado_del_Camino.jpg
+*/
+
 const poemsData = [
   {
     title: "Poema número 1",
@@ -467,6 +573,78 @@ Y se niega a estar enfermo de normalidad.`
   },
 
   {
+    title: "Sobre todo ahí",
+    image: "images/6296a79a-91a0-4643-aed7-891a62a99654.jpg",
+    text: `Te amo cuando huyo,
+porque siempre corro hacia vos sin darme cuenta.
+
+Te amo con la duda,
+con la fe que no cree en nada,
+con este pulso torcido que jura olvidarte
+y vuelve a pronunciar tu nombre como un error inevitable.
+
+Te amo desde el desorden:
+desde lo que pienso y no hago,
+desde lo que hago y no siento,
+desde lo que siento y no me animo a entender.
+
+Te amo cuando me contradigo
+y te niego para protegerme,
+cuando finjo distancia
+para que no notes que ya estoy perdido.
+
+Te amo sin permiso,
+sin razones,
+sin coartadas que me salven del ridículo.
+Te amo como se ama lo que no se explica
+y, aun así, insiste.
+
+Te amo con esta cabeza que discute,
+con este cuerpo que decide antes que yo,
+con este corazón que se equivoca
+y vuelve a elegirte como si no hubiera aprendido nada.
+
+Te amo aunque no mejore el mundo,
+aunque no cure la herida,
+aunque no prometa finales felices.
+Te amo porque, sin hacer ruido,
+volviste habitable lo que en mí era ruina.
+
+Te amo incluso cuando digo que no.
+Sobre todo ahí.
+
+Porque si no te amara,
+no necesitaría negarlo.`
+  },
+
+  {
+    title: "Te amo negándote",
+    image: "images/c4463724-63b8-4249-9681-f91fb84a4975.jpg",
+    text: `Te amo con la violencia de un mar en calma,
+con la paz mentirosa que me rompe el alma.
+Te amo negándote, para que seas más cierto,
+te busco en la vida sintiéndome muerto.
+
+Es un amor torpe, que no pide permiso,
+que me tira al infierno y me cree en el paraíso.
+Te amo con este cuerpo que ya no me obedece,
+que cuando te vas, se marchita y florece.
+
+No es que te quiera, es que no puedo evitarlo,
+trato de esconder este amor y termino por gritarlo.
+Te engaño diciendo que ya no me importas,
+mientras te abro las puertas que vos mismo cortas.
+
+Te amo sin razones, sin brújula, a ciegas,
+te doy lo que tengo y también lo que niegas.
+Es un error perfecto, una herida que sana,
+amarte hoy con la fuerza de quien no te ama mañana.
+
+Y sin embargo te amo, estúpidamente fiel,
+tomando veneno creyendo que es miel.`
+  },
+
+  {
     title: "La cuenta regresiva",
     image: "images/ed9e2734-4567-467a-80a5-c48b1d47cd02.jpg",
     text: `Recién llegaste y ya estás mirando la puerta,
@@ -631,13 +809,19 @@ y significa más.`
   }
 ];
 
-/* Render grid en el orden del array */
+/* RENDER GRID */
 const grid = document.getElementById('grid');
+grid.innerHTML = '';
 
 poemsData.forEach((p, i) => {
   const card = document.createElement('div');
   card.className = 'card';
+  card.tabIndex = 0;
   card.onclick = () => openModal(i);
+  card.onkeydown = (e) => { if(e.key === 'Enter' || e.key === ' ') openModal(i); };
+
+  const wrap = document.createElement('div');
+  wrap.className = 'img-wrap';
 
   const img = document.createElement('img');
   img.src = p.image;
@@ -646,8 +830,8 @@ poemsData.forEach((p, i) => {
   img.setAttribute('data-title', p.title);
 
   img.addEventListener('error', () => {
-    if (img.parentElement) {
-      img.remove();
+    if (wrap.parentElement){
+      wrap.remove();
       const placeholder = document.createElement('div');
       placeholder.className = 'img-missing';
       placeholder.innerText = 'Imagen no encontrada:\n' + p.title;
@@ -656,33 +840,36 @@ poemsData.forEach((p, i) => {
     }
   });
 
+  wrap.appendChild(img);
+
   const titleDiv = document.createElement('div');
   titleDiv.className = 'card-title';
   titleDiv.textContent = p.title;
 
-  card.appendChild(img);
+  card.appendChild(wrap);
   card.appendChild(titleDiv);
   grid.appendChild(card);
 });
 
-/* Modal logic */
+/* MODAL */
 function openModal(index){
   const p = poemsData[index];
-  document.getElementById("modalTitle").textContent = p.title;
-  document.getElementById("modalText").textContent = p.text;
-  const overlay = document.getElementById("modalOverlay");
-  overlay.style.display = "flex";
-  const modal = document.getElementById("modal");
+  document.getElementById('modalTitle').textContent = p.title;
+  document.getElementById('modalText').textContent = p.text;
+  const overlay = document.getElementById('modalOverlay');
+  overlay.style.display = 'flex';
+  const modal = document.getElementById('modal');
   setTimeout(()=> modal.focus(), 10);
   overlay.setAttribute('aria-hidden','false');
 }
 function hideModal(){
-  const overlay = document.getElementById("modalOverlay");
-  overlay.style.display = "none";
+  const overlay = document.getElementById('modalOverlay');
+  overlay.style.display = 'none';
   overlay.setAttribute('aria-hidden','true');
 }
-function closeModal(e){ if(e.target.id === "modalOverlay") hideModal(); }
-document.addEventListener('keydown', e => { if(e.key === "Escape") hideModal(); });
+function closeModal(e){ if(e.target.id === 'modalOverlay') hideModal(); }
+document.addEventListener('keydown', e => { if(e.key === 'Escape') hideModal(); });
+
 </script>
 </body>
 </html>
