@@ -155,10 +155,10 @@
 <script>
 // ⚠️ REEMPLAZA ESTO CON TU CLAVE ANON PUBLIC
 const SUPABASE_URL = 'https://yqkaryzfiicqwwupigni.supabase.co';
-const SUPABASE_ANON_KEY = 'PEGA_TU_CLAVE_ANON_PUBLIC_AQUI';
+const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inlxa2FyeXpmaWljcXd3dXBpZ25pIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzU3NTg3MTgsImV4cCI6MjA5MTMzNDcxOH0.6eu6Ah1rCDZlBJBsyEp4YNWsDIw-Wq5sLjLSkbtyqH0';
 
 const { createClient } = window.supabase;
-const supabase = createClient(eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inlxa2FyeXpmaWljcXd3dXBpZ25pIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzU3NTg3MTgsImV4cCI6MjA5MTMzNDcxOH0.6eu6Ah1rCDZlBJBsyEp4YNWsDIw-Wq5sLjLSkbtyqH0);
+const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
 const poemsData = [
   {
