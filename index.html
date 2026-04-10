@@ -26,9 +26,10 @@
       aspect-ratio:4/3;
       display:flex;
       align-items:stretch;
-      overflow:visible;
+      overflow:visible; /* clipping handled by .img-wrap */
     }
 
+    /* CORRECCIÓN: el wrapper hace el clipping para img/video/canvas */
     .img-wrap{
       width:100%;
       height:100%;
@@ -101,30 +102,9 @@
 
     .modal h2{ margin-top:0; font-weight:400; }
     .modal pre{ white-space:pre-wrap; line-height:1.7; font-family:Georgia, serif; font-size:16px; margin:0; }
-    
     .close-btn{ position:absolute; right:18px; top:18px;
       background:transparent; border:1px solid rgba(255,255,255,0.08);
       color:var(--text); padding:6px 10px; border-radius:6px; cursor:pointer; }
-
-    .view-counter{
-      position:absolute;
-      right:18px;
-      top:18px;
-      display:flex;
-      align-items:center;
-      gap:8px;
-      padding:8px 12px;
-      background:rgba(255,255,255,0.1);
-      border-radius:6px;
-      font-size:14px;
-      color:var(--text);
-      margin-right:60px;
-    }
-
-    .eye-icon{
-      width:20px;
-      height:20px;
-    }
 
     @keyframes fadeIn{ from{opacity:0; transform:scale(.98)} to{opacity:1; transform:scale(1)} }
     @media (max-width:600px){ .modal{ padding:25px } }
@@ -137,28 +117,33 @@
 
   <div class="modal-overlay" id="modalOverlay" onclick="closeModal(event)">
     <div class="modal" id="modal" role="dialog" aria-modal="true" tabindex="-1">
-      <div class="view-counter" id="viewCounter">
-        <svg class="eye-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-          <circle cx="12" cy="12" r="3"></circle>
-        </svg>
-        <span id="viewCount">0</span>
-      </div>
       <button class="close-btn" onclick="hideModal()" aria-label="Cerrar">Cerrar</button>
       <h2 id="modalTitle"></h2>
       <pre id="modalText"></pre>
     </div>
   </div>
 
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-
 <script>
-// ⚠️ REEMPLAZA ESTO CON TU CLAVE ANON PUBLIC
-const SUPABASE_URL = 'https://yqkaryzfiicqwwupigni.supabase.co';
-const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inlxa2FyeXpmaWljcXd3dXBpZ25pIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzU3NTg3MTgsImV4cCI6MjA5MTMzNDcxOH0.6eu6Ah1rCDZlBJBsyEp4YNWsDIw-Wq5sLjLSkbtyqH0';
-
-const { createClient } = window.supabase;
-const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+/*
+  index.html completo con todos los poemas que me pasaste.
+  Asegúrate de colocar las imágenes en la carpeta images/ con los nombres exactos:
+  - images/31ece26e-e5e1-41c6-857f-489487d0365c.jpg  (Poema número 1)
+  - images/Poema_2.jpg
+  - images/Gemini_Generated_Image_60p8kf60p8kf60p8.png (Poema número 3)
+  - images/Gemini_Generated_Image_oz0tbloz0tbloz0t.png (Poema número 4)
+  - images/Poema_3.jpg (ahora Poema número 5)
+  - images/Poema_4.jpg (ahora Poema número 6)
+  - images/Poema_5.jpg (ahora Poema número 7)
+  - images/Poema_6.jpg (ahora Poema número 8)
+  - images/Poema_7.png (ahora Poema número 9)
+  - images/Para_Mamá.png
+  - images/cuenta_regresiva.jpg
+  - images/6296a79a-91a0-4643-aed7-891a62a99654.jpg
+  - images/c4463724-63b8-4249-9681-f91fb84a4975.jpg
+  - images/ed9e2734-4567-467a-80a5-c48b1d47cd02.jpg
+  - images/Quien_Soy.jpg
+  - images/Al_Lado_del_Camino.jpg
+*/
 
 const poemsData = [
   {
@@ -916,44 +901,6 @@ y significa más.`
   }
 ];
 
-let viewsData = {};
-
-// Cargar views de Supabase
-async function loadViews() {
-  try {
-    const { data, error } = await supabase
-      .from('views')
-      .select('*');
-    
-    if (error) throw error;
-    
-    if (data && data.length > 0) {
-      data.forEach(row => {
-        viewsData[row.poem_index] = row.view_count;
-      });
-    }
-  } catch (error) {
-    console.error('Error cargando views:', error.message);
-  }
-}
-
-// Actualizar views en Supabase
-async function incrementView(poemIndex) {
-  try {
-    viewsData[poemIndex] = (viewsData[poemIndex] || 0) + 1;
-    
-    const { error } = await supabase
-      .from('views')
-      .update({ view_count: viewsData[poemIndex] })
-      .eq('poem_index', poemIndex);
-    
-    if (error) throw error;
-    
-  } catch (error) {
-    console.error('Error actualizando views:', error.message);
-  }
-}
-
 /* RENDER GRID */
 const grid = document.getElementById('grid');
 grid.innerHTML = '';
@@ -972,6 +919,7 @@ poemsData.forEach((p, i) => {
   img.src = p.image;
   img.alt = p.title;
   img.loading = 'lazy';
+  img.setAttribute('data-title', p.title);
 
   img.addEventListener('error', () => {
     if (wrap.parentElement){
@@ -980,6 +928,7 @@ poemsData.forEach((p, i) => {
       placeholder.className = 'img-missing';
       placeholder.innerText = 'Imagen no encontrada:\n' + p.title;
       card.insertBefore(placeholder, card.firstChild);
+      console.error('Imagen no encontrada ->', p.image);
     }
   });
 
@@ -999,29 +948,19 @@ function openModal(index){
   const p = poemsData[index];
   document.getElementById('modalTitle').textContent = p.title;
   document.getElementById('modalText').textContent = p.text;
-  
-  // Incrementar vista
-  incrementView(index);
-  document.getElementById('viewCount').textContent = viewsData[index] || 0;
-  
   const overlay = document.getElementById('modalOverlay');
   overlay.style.display = 'flex';
   const modal = document.getElementById('modal');
   setTimeout(()=> modal.focus(), 10);
   overlay.setAttribute('aria-hidden','false');
 }
-
 function hideModal(){
   const overlay = document.getElementById('modalOverlay');
   overlay.style.display = 'none';
   overlay.setAttribute('aria-hidden','true');
 }
-
 function closeModal(e){ if(e.target.id === 'modalOverlay') hideModal(); }
 document.addEventListener('keydown', e => { if(e.key === 'Escape') hideModal(); });
-
-// Cargar views al iniciar
-loadViews();
 
 </script>
 </body>
