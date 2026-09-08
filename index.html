@@ -7,27 +7,35 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="hero" id="hero" role="banner" aria-hidden="false">
+  <header class="hero" id="hero" role="banner">
     <div class="hero-inner" id="heroButton" role="button" aria-label="Abrir colección 20 poemas del amor" tabindex="0">
       <img id="heroImg" class="hero-img" alt="Portada 20 poemas del amor" />
       <div class="hero-title">
         <h1>20 poemas del amor</h1>
-        <p class="hero-sub">Haz clic para entrar</p>
+        <p class="hero-sub">Haz clic para abrir la colección</p>
       </div>
     </div>
   </header>
 
   <main id="main">
-    <section class="grid" id="grid" aria-live="polite" aria-label="Lista de poemas"></section>
+    <section class="categories" id="categories" aria-label="Categorías de poemas">
+      <!-- tres cuadrados de categoría se renderizan desde JS -->
+    </section>
   </main>
 
+  <!-- modal único que alterna entre: vista-colección/vista-categoría y vista-poema -->
   <div class="modal-overlay" id="modalOverlay" aria-hidden="true">
     <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" tabindex="-1">
-      <button class="close-btn" id="closeBtn" aria-label="Cerrar poema">Cerrar ✕</button>
+      <button class="close-btn" id="closeBtn" aria-label="Cerrar">Cerrar ✕</button>
       <h2 id="modalTitle"></h2>
-      <!-- usamos PRE para preservar saltos y estructura del poema -->
-      <pre id="modalBody" class="modal-body poem" tabindex="0"></pre>
-      <div class="modal-foot">
+
+      <!-- contenedor que mostrará: grid de items (colección o categoría) -->
+      <div id="modalGrid" class="modal-grid" tabindex="0"></div>
+
+      <!-- contenedor detalle poema (oculto cuando se muestra grid) -->
+      <pre id="modalPoem" class="modal-poem" tabindex="0" style="display:none;"></pre>
+
+      <div class="modal-foot" id="modalFoot" style="display:none;">
         <button id="prevBtn" class="nav-btn" aria-label="Poema anterior">◀︎ Anterior</button>
         <button id="nextBtn" class="nav-btn" aria-label="Siguiente poema">Siguiente ▶︎</button>
       </div>
