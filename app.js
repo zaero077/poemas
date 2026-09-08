@@ -1,5 +1,41 @@
-// Datos de poemas (usa exactamente los textos que me pasaste).
-// Nota: si quieres cambiar la portada, sustituye images/cover.jpg por el nombre real.
+// app.js completo con los 20 poemas (texto tal como lo proporcionaste).
+// Portada: nombre exacto del archivo colocado en /images/
+const coverFileName = 'Captura de pantalla 2026-09-08 095030.png';
+const heroImg = document.getElementById('heroImg');
+
+// Intentamos cargar el nombre con encodeURIComponent por si tiene espacios
+heroImg.src = 'images/' + encodeURIComponent(coverFileName);
+heroImg.alt = 'Portada 20 poemas del amor';
+heroImg.addEventListener('error', () => {
+  const parent = heroImg.parentElement;
+  const placeholder = document.createElement('div');
+  placeholder.className = 'hero-placeholder';
+  placeholder.innerText = 'Portada no encontrada\nColoca ' + coverFileName + ' en /images/';
+  parent.replaceChild(placeholder, heroImg);
+  console.error('No se pudo cargar la portada:', coverFileName);
+});
+
+/* PALETTE para tarjetas */
+const palette = [
+  '#FF6B6B','#FF8E72','#FFB86B','#FFD166','#FFF275',
+  '#A9E887','#66D6A9','#4AC6C6','#6ECFF6','#7AA9FF',
+  '#9E86FF','#C881FF','#FF8ED1','#FF6B9A','#D98EC6',
+  '#F6A6A6','#FFB3A1','#FFD8A8','#C6E5B3','#BFD8FF'
+];
+
+function getContrastColor(hex){
+  const c = hex.replace('#','');
+  const r = parseInt(c.substr(0,2),16)/255;
+  const g = parseInt(c.substr(2,2),16)/255;
+  const b = parseInt(c.substr(4,2),16)/255;
+  const rl = r <= 0.03928 ? r/12.92 : Math.pow((r+0.055)/1.055, 2.4);
+  const gl = g <= 0.03928 ? g/12.92 : Math.pow((g+0.055)/1.055, 2.4);
+  const bl = b <= 0.03928 ? b/12.92 : Math.pow((b+0.055)/1.055, 2.4);
+  const L = 0.2126*rl + 0.7152*gl + 0.0722*bl;
+  return L > 0.5 ? '#111' : '#fff';
+}
+
+/* POEMAS: array con los 20 poemas completos (copiados desde tu archivo) */
 const poems = [
   {
     title: "Poema número 1",
@@ -42,6 +78,7 @@ es que no termino de conocerte.
 Y quizás esa sea la forma más viva
 de quedarme.`
   },
+
   {
     title: "Poema número 2",
     text: `Eres la única certeza
@@ -82,6 +119,7 @@ que a veces la certeza más verdadera
 es la que abre una duda
 y la deja florecer.`
   },
+
   {
     title: "Poema número 3",
     text: `Durante mucho tiempo pensé
@@ -148,6 +186,7 @@ desde siempre,
 había estado buscando
 un lugar más pequeño donde existir.`
   },
+
   {
     title: "Poema número 4",
     text: `Quiero llegar a vos
@@ -228,6 +267,7 @@ de caber
 en tus ojos.
 Quiero.`
   },
+
   {
     title: "Poema número 5",
     text: `Todavía creo
@@ -286,6 +326,7 @@ Lo que cambia
 es la cantidad de mundo
 que somos capaces de ver.`
   },
+
   {
     title: "Poema número 6",
     text: `Los cerezos desaparecen
@@ -347,6 +388,7 @@ el viento
 seguía demorándose
 debajo de los cerezos.`
   },
+
   {
     title: "Poema número 7",
     text: `Duermes.
@@ -451,6 +493,7 @@ Como si hubieras pasado
 toda la noche
 volviendo.`
   },
+
   {
     title: "Poema número 8",
     text: `El prado en invierno se siente raro.
@@ -521,6 +564,7 @@ aprendí una forma distinta de ver el prado,
  que quizás dure mucho más
  que este frío invierno.`
   },
+
   {
     title: "Poema número 9",
     text: `Un día una sombra se enamoró de la luz.
@@ -647,6 +691,7 @@ por el pasillo,
 hasta un lugar
 al que aquella luz nunca había llegado.`
   },
+
   {
     title: "Poema número 10",
     text: `No entiendo cómo una noche puede caber
@@ -729,6 +774,7 @@ Que el mar se lleve
 Porque aquella noche sigue siendo enorme.
 Yo solo recuerdo dónde empieza.`
   },
+
   {
     title: "Poema número 11",
     text: `Siento que el verano todavía está confundido con nosotros.
@@ -845,6 +891,7 @@ Seguimos caminando.
 El sol ya casi se había ido.
 Nuestras sombras todavía no.`
   },
+
   {
     title: "Poema número 12",
     text: `Nunca entendí cómo una distancia
@@ -928,6 +975,7 @@ moviéndose debajo de la superficie.
 Por un momento
 parecía que la luna seguía allí.`
   },
+
   {
     title: "Poema número 13",
     text: `He comparado 14.782.301 comportamientos humanos.
@@ -1084,7 +1132,7 @@ La semilla permanecía oculta.
 Aun así,
  el comportamiento continuó.
 ¿Por qué observar
- algo que todavía no ha ocurrido?
+algo que todavía no ha ocurrido?
 No encontré una respuesta.
 Registré la pregunta.
 Quinto caso.
@@ -1107,7 +1155,7 @@ Una parte del tronco puede morir
 Si todo cambia
  y el nombre permanece,
 ¿qué es exactamente
-lo que permanece?
+ lo que permanece?
 No encontré una respuesta.
 Registré la pregunta.
 El número de variables sin resolver
@@ -1223,6 +1271,7 @@ No sé qué significa
 He intentado eliminarlo.
 No lo hice.`
   },
+
   {
     title: "Poema número 14",
     text: `En Villa Serrana
@@ -1286,6 +1335,7 @@ pensé en algo más:
 ¿Puede algo terminar
 y seguir siendo eterno?`
   },
+
   {
     title: "Poema número 15",
     text: `Hay cosas que ocurren una sola vez
@@ -1333,9 +1383,245 @@ un árbol que encontró una forma más lenta
 de recordar el viento.
 A veces una tecla baja
 y durante un instante parece que una rama
-estuviera intentando volver al cielo...
-(continúa el poema largo en el archivo original).`
+estuviera intentando volver al cielo.
+No sé por qué pensé en eso.
+Quizá porque hay cosas que cambian de forma
+sin dejar de pertenecer a lo que fueron.
+O quizá para conservar algo
+a veces haya que dejar de ser aquello que lo guardaba.
+Entonces escuché una canción terminar.
+Una nota se apagó.
+Después otra.
+Y quedó ese pequeño silencio
+que siempre había creído vacío.
+Ahora ya no.
+Porque hay silencios que parecen estar esperando.
+No sé qué.
+Y fue ahí cuando pensé en una octava nota.
+Siempre pensé que sería una más.
+Algo después del si,
+una tecla que nadie había construido.
+Pero quizá no.
+Quizá estaría en ese instante en que una nota termina
+y el silencio todavía conserva su forma.
+A veces imagino que, si alguna vez sonara,
+no cambiaría la canción.
+Cambiaría todo lo que habíamos escuchado antes de ella.
+El mismo piano.
+Las mismas teclas.
+La misma melodía.
+Y, sin embargo, algo habría cambiado tan profundamente
+que parecería que la canción acabara de recordar su propio nombre.
+Capaz que por eso no puedo decidir
+si esa nota falta
+o si todavía no ha ocurrido.
+Aunque las dos cosas no deberían significar lo mismo.
+Una pertenece al pasado.
+La otra, a algo que todavía no llega.
+Y quizá la diferencia sea solamente nuestra.
+Quizá hay cosas que empiezan a existir
+mucho antes de suceder.
+Por eso, cuando pienso en la octava,
+no imagino un sonido.
+Imagino un lugar.
+Un pequeño espacio entre dos notas
+que nunca me había parecido importante
+hasta que empecé a sospechar que podía contener una canción entera.
+Después me parece absurdo.
+Un piano tiene siete notas naturales.
+Las aprendimos.
+Las nombramos.
+Las ordenamos.
+Durante siglos hicieron falta para decir casi todo.
+¿Para qué habría de faltar una más?
+Aunque quizá esa sea la pregunta equivocada.
+Capaz que la octava no sea la que falta.
+Capaz que sea la que vuelve insuficientes a las otras siete.
+Y no sé si eso es mejor.
+Porque entonces una canción que siempre creí completa
+habría estado esperando algo
+sin saber siquiera qué esperaba.
+Pienso en eso y vuelvo al cerezo.
+No sé por qué siempre termino ahí.
+Quizá porque fue la primera cosa que no obedeció al tiempo
+y, en lugar de explicarse, floreció.
+Durante unos días, el invierno pasó debajo de sus ramas
+sin tocar las flores.
+Me gusta pensar que el árbol sabía algo.
+Aunque quizá solo lo inventé después.
+También puede ser que un cerezo sea solamente un cerezo.
+A veces conviene recordar eso.
+Que las cosas no tienen por qué guardar secretos
+para ser hermosas.
+Pero entonces pienso en la luz.
+Siempre nos dijeron que los agujeros negros la devoran.
+Y devorar me parece una palabra demasiado definitiva.
+Capaz que no la devoran.
+Capaz que la guardan.
+Para después.
+Para una noche suficientemente profunda.
+Para un color que todavía no existe.
+Para una nota que todavía no encontró
+con qué acompañarse.
+Sé que suena absurdo.
+Una luz esperando un color.
+Un color esperando una nota.
+La oscuridad conservando algo
+que no podemos ver.
+Pero una semilla tampoco se parece mucho a un árbol.
+Pasa meses bajo la tierra
+sin parecerse en absoluto a aquello que será.
+Y nadie dice que está perdida.
+Quizá la oscuridad también sea una forma de guardar.
+Quizá por eso algunas cosas necesitan desaparecer
+antes de encontrar la forma correcta de volver.
+No sé.
+Ya estoy haciendo otra vez lo mismo.
+Juntando cosas que no deberían tener nada que ver.
+Un cerezo.
+Un piano.
+Una nota imposible.
+Un agujero negro.
+Una luz que quizá no se perdió.
+Una semilla enterrada.
+Y, como si fuera poco, una telaraña.
+La vi después de la lluvia.
+El rocío había quedado prendido de cada hilo
+como si alguien hubiese dibujado constelaciones
+sobre algo demasiado pequeño para llamarse cielo.
+Pensé que las arañas tejían para atrapar.
+Después pensé que quizá no.
+Quizá estaban cosiendo.
+No insectos.
+El espacio entre las cosas.
+Lo extraño de un hilo
+es que solo aparece cuando dos lugares están separados.
+Y, sin embargo, en cuanto aparece,
+la distancia deja de ser completamente distancia.
+Me quedé mirándolo un rato.
+Una sola gota parecía suficiente para romperlo.
+Y, aun así, la mañana entera estaba suspendida sobre él.
+Capaz que eso también sea la música.
+Algo demasiado frágil para sostenerse
+y, sin embargo, capaz de mantener unido
+lo que se caería sin ella.
+Ya sé.
+Estoy buscando demasiado.
+Quizá una telaraña sea solamente una telaraña.
+Quizá los agujeros negros no guardan nada.
+Quizá la madera no recuerda el viento.
+Quizá aquel cerezo simplemente floreció antes de tiempo.
+Y quizá un piano tiene siete notas
+porque siete fueron suficientes.
+Por un momento incluso pensé
+que la octava nota nunca había existido.
+Que era solamente una forma bonita
+de explicar esa sensación absurda
+de que algunas canciones terminan
+y todavía dejan algo sin decir.
+Me convencí casi.
+Hasta que recordé el principio.
+Aquello que uno reconoce
+antes de haberlo conocido.
+Y entonces ya no pude decidir
+si estaba pensando en música
+o en otra cosa.
+Porque hay canciones que no parecen nuevas
+cuando finalmente las escuchamos.
+Parecen regresos.
+Hay lugares donde nunca estuvimos
+que pueden resultar familiares.
+Hay nombres que, antes de significar nada,
+ya parecen llevar muchísimo tiempo esperando una voz.
+Y quizá por eso algunas cosas
+no llegan realmente.
+Quizá encuentran una forma de regresar.
+Entonces vuelvo a pensar en el cerezo.
+Y ya no sé si floreció fuera de estación.
+Capaz que la primavera no siempre llega desde el futuro.
+Capaz que, algunas veces,
+regresa desde la memoria.
+Y quizá la madera tampoco dejó de ser árbol.
+Quizá el árbol encontró otra forma de seguir escuchando.
+Quizá la luz no desapareció.
+Quizá solo cambió de lugar
+hasta que exista algo capaz de devolverle un nombre.
+Y quizá el silencio tampoco esté vacío.
+Quizá guarda cosas
+que todavía no sabemos perder.
+A veces pienso que el universo lleva miles de millones de años afinándose.
+Después pienso que es una idea ridícula.
+Que las estrellas son solamente estrellas.
+Que el invierno es invierno.
+Que los árboles florecen cuando tienen que florecer.
+Que la noche no espera nada.
+Que una canción termina cuando termina.
+Me gustaría creerlo.
+Sería más fácil.
+Pero hay algo que no consigo explicar.
+Si todo está exactamente como debería estar,
+¿por qué algunas cosas producen esa extraña sensación
+de haber dejado un sitio preparado para algo?
+No un vacío.
+Un sitio.
+Como si la ausencia pudiera tener forma.
+Como si ciertas cosas, antes de llegar,
+ya estuvieran modificando el espacio que algún día ocuparían.
+Y quizá ahí está el verdadero problema.
+No sé si la octava nota es algo que falta.
+Tal vez sea algo que hace que podamos notar que faltaba.
+No sé si eso tiene sentido.
+A veces las ideas más extrañas
+se vuelven difíciles de abandonar
+justamente porque ninguna explicación sencilla consigue reemplazarlas.
+Así que vuelvo al piano.
+A las siete notas.
+A ese pequeño silencio entre una y otra.
+A la madera que quizá todavía recuerda el bosque.
+Y pienso que tal vez una octava nota no tendría que sonar nunca.
+Tal vez bastaría con que existiera
+para que todas las demás
+dejaran de sonar exactamente igual.
+Después me pregunto si eso no fue lo que ocurrió siempre.
+Con el cerezo.
+Con la luz.
+Con la noche.
+Con las cosas que parecían completas
+hasta que apareció algo que las hizo mirar de otra manera.
+Capaz que por eso la belleza nos confunde.
+Porque no siempre añade algo.
+A veces simplemente revela
+lo que ya estaba ahí.
+Y quizá el universo no esté lleno de cosas que nacen.
+Quizá esté lleno de cosas que intentan volver.
+No sé.
+Tal vez mañana piense que todo esto es una forma demasiado hermosa de equivocarme.
+Ojalá.
+Porque si no lo fuera,
+habría algo todavía más extraño que una octava nota:
+un mundo entero
+que lleva miles de millones de años
+aprendiendo a reconocerla.
+Y desde entonces, cuando un piano deja un silencio demasiado largo entre dos notas,
+ya no intento llenarlo.
+Espero.
+No porque sepa qué viene después.
+Sino porque quizá algunas cosas no llegan a nuestras vidas.
+Quizá nuestras vidas pasan muchísimo tiempo
+aprendiendo a reconocerlas.
+Y quizá, cuando por fin ocurren,
+no escuchamos nada.
+Solo miramos alrededor.
+Un poco confundidos.
+Como un cerezo en pleno invierno.
+Como una luz detrás de una ventana vacía.
+Como una tecla que todavía no ha sido tocada.
+Y durante un instante, sin saber por qué,
+todo parece estar exactamente en su lugar.
+Hasta el silencio.
+Especialmente el silencio.`
   },
+
   {
     title: "Poema número 16",
     text: `En Minas
@@ -1358,9 +1644,9 @@ Vos caminabas a mi lado.
 Entre dos piedras
 había una flor.
 El sol estaba detrás de nosotros,
-pero la flor
-había crecido inclinada
-hacia donde estabas vos.
+ pero la flor
+ había crecido inclinada
+ hacia donde estabas vos.
 No la tocamos.
 Seguimos.
 Llegamos al arroyo.
@@ -1444,6 +1730,7 @@ debajo de nuestras manos
 todavía guardaba
 la tarde entera.`
   },
+
   {
     title: "Poema número 17",
     text: `Todavía no te moviste
@@ -1574,6 +1861,7 @@ y que, cuando te vas,
 tarda un poco
 en desaparecer.`
   },
+
   {
     title: "Poema número 18",
     text: `He permanecido en la misma pared
@@ -1662,6 +1950,7 @@ Después de un primer beso.
 Después de una última palabra.
 Siempre.`
   },
+
   {
     title: "Poema número 19",
     text: `Te amo
@@ -1708,8 +1997,161 @@ viajando por la oscuridad
 con la memoria
 de todos los fuegos
 que alguna vez fueron.
-... (continúa el poema largo en el archivo original).`
+Hay una clase de luz
+que solamente aparece
+después de haber atravesado
+lugares donde nadie podía verla.
+Vos tenés esa luz.
+La de las cosas
+que no salieron intactas del tiempo,
+pero encontraron una manera
+de seguir siendo hermosas.
+Tu corazón parece
+una montaña escrita con ceniza.
+Cada capa guarda
+un incendio antiguo.
+Cada piedra conserva
+el rumor de algo
+que alguna vez quiso romperla.
+Y aun así,
+ahí está.
+Quieto.
+Sosteniendo el cielo.
+Como si hubiera aprendido
+que incluso el fuego
+puede convertirse
+en paisaje.
+Por eso amo tus inviernos.
+No porque quiera verlos terminar.
+Hay árboles
+que durante meses
+parecen haber olvidado
+cómo se vuelve a florecer.
+Pero debajo de la corteza
+la primavera trabaja en silencio.
+Sin aplausos.
+Sin promesas.
+Preparando una hoja
+que todavía nadie conoce.
+Quizás algunas personas
+son así.
+Guardan estaciones enteras
+en lugares
+donde nadie mira.
+No quiero conocer solamente
+la parte de vos
+que sabe sonreír.
+Quiero también
+esa habitación cerrada
+donde dejás las cosas
+que todavía no tienen nombre.
+Porque hay silencios
+que parecen vacíos
+hasta que alguien aprende
+a escucharlos.
+La noche siempre me pareció distinta
+desde que te conozco.
+La luz no pelea contra ella.
+La noche es el lugar
+donde la luz guarda
+todo aquello
+que todavía no sabe decir.
+Tal vez por eso
+tus sombras nunca me asustaron.
+Hay lugares del universo
+donde las estrellas nacen
+de la misma oscuridad
+que parecía querer tragarlas.
+Y quizás el alma también funciona así.
+Cuando entrás en una habitación
+algo extraño sucede.
+La madera recuerda al árbol.
+El vidrio recuerda la arena
+que alguna vez fue océano.
+La piedra recuerda la montaña
+antes de aprender
+a quedarse quieta.
+Como si tu presencia
+le devolviera a las cosas
+la vida que tuvieron
+antes de convertirse
+en otra cosa.
+Hay grietas
+que parecen guardar secretos
+más antiguos que la pared.
+Hay casas
+que aprendieron a recibir el sol
+por lugares
+donde alguna vez entró la lluvia.
+Hay personas
+que llevan sus marcas
+como mapas de territorios
+que solo ellas pudieron atravesar.
+Mujer de corazón gris,
+tu corazón es una ciudad
+construida alrededor de una ruina
+que nadie quiso derribar.
+Y quizás esa sea
+la razón de su belleza.
+Porque hay lugares
+que serían más fáciles de entender
+si borráramos su historia.
+Pero perderían
+todo aquello
+que los hizo únicos.
+No sos una primavera eterna.
+Las primaveras perfectas
+duran demasiado poco.
+Sos ese instante extraño
+donde un árbol conserva
+una última hoja del otoño
+mientras debajo de la tierra
+ya comienza otra vida.
+Sos una estación
+que ningún calendario pudo nombrar.
+Un clima propio.
+Una forma del mundo
+que aparece
+cuando dos cosas opuestas
+dejan de intentar vencerse.
+Y ahora entiendo
+por qué existe el gris.
+No porque sea la mitad
+de algo.
+Sino porque hay cosas
+demasiado profundas
+para entrar completas
+en un solo color.
+Desde que llegaste,
+mi manera de mirar cambió.
+Ahora sé
+que los ríos no llevan solamente agua.
+También llevan montañas
+que aprendieron a viajar.
+Que las piedras no son solamente piedra.
+También son tiempo
+que decidió quedarse quieto.
+Que las personas
+no son solamente
+lo que muestran.
+También son todo aquello
+que sigue creciendo
+en silencio.
+Y cuando te miro,
+mujer de corazón gris,
+entiendo algo
+que el mundo llevaba siglos intentando decir:
+que algunas almas
+no fueron hechas
+para ser completamente luz
+ni completamente sombra.
+Fueron hechas
+para demostrar
+que entre ambas
+todavía existe
+un universo entero.`
   },
+
   {
     title: "Poema número 20",
     text: `No fue amor lo que hiciste.
@@ -1772,11 +2214,275 @@ Aunque quizá ninguno de los dos
 entendió del todo el problema.
 Hay cosas que no permanecen
 ni en la cabeza ni en el corazón.
-Se quedan en la mirada.`
+Se quedan en la mirada.
+Y entonces me pregunté
+qué quedaba por olvidar.
+No encontré tu nombre.
+Ni tu voz.
+Ni tus manos.
+Encontré otra cosa.
+La forma en que una tarde
+podía parecerme distinta.
+La forma en que una canción
+podía dejar un segundo de silencio
+y hacer que yo escuchara más.
+La forma en que cierta luz
+todavía conseguía detenerme.
+El color.
+El color nunca fue tuyo.
+No te lo habías traído.
+No te lo llevaste.
+Solo apareció
+cuando mis ojos aprendieron a verlo.
+Y eso dejó una pregunta
+que tardé mucho en hacerme:
+si ya no estabas
+en los lugares donde te buscaba,
+¿qué se suponía que debía hacer
+con todo lo que había cambiado
+mientras estabas?
+Durante mucho tiempo pensé
+que lo que quería era volver.
+No a vos.
+A mí.
+Volví a los mismos lugares
+con una excusa distinta cada vez.
+Una canción que ya no escuchaba.
+Una calle por la que hacía años no pasaba.
+Alguna costumbre que había dejado caer
+sin darme cuenta.
+Pensé que, si encontraba suficientes cosas
+que todavía se parecieran a mí,
+tal vez aparecería también
+la persona que había sido.
+Pero las calles seguían ahí.
+La misma esquina.
+La misma ventana.
+La misma tarde cayendo sobre los edificios
+con una indiferencia casi perfecta.
+Y yo seguía sin encontrarme.
+Al principio culpé al tiempo.
+Después a la distancia.
+Después, un poco,
+al amor.
+Me molestaba reconocer en mí
+cosas que antes no estaban.
+Una forma distinta de escuchar ciertas palabras.
+Una desconfianza que no había pedido.
+La costumbre de mirar una despedida
+como si ya llevara meses ocurriendo
+antes de que alguien pronunciara adiós.
+No sabía si llamarlas heridas
+o simplemente otra forma de piel.
+A veces pensaba
+que todo habría sido más sencillo
+si hubiera salido de aquello
+exactamente como había entrado.
+Pero algo en mí se resistía
+a esa idea.
+Porque también habían quedado cosas
+que no quería perder.
+La paciencia con algunas tardes.
+La costumbre de escuchar
+un poco más después de que termina una canción.
+La capacidad de detenerme
+ante ciertas luces
+sin saber por qué.
+Y aquel color.
+Siempre aquel color.
+Durante un tiempo pensé
+que para volver
+tendría que devolver todo eso.
+Como si crecer fuera una habitación
+de la que uno pudiera salir
+dejando las cosas en el suelo
+antes de cerrar la puerta.
+Pero no sabía qué tendría que llevarme conmigo.
+¿La forma nueva de mirar?
+¿Las preguntas?
+¿Todo aquello que aprendí
+a fuerza de perder?
+¿También tendría que olvidar
+que algunas promesas pesan más
+después de haberlas visto romperse?
+Ahí la idea empezó a cambiar.
+Quizá no estaba intentando volver.
+Quizá estaba intentando
+encontrar a alguien
+que ya no tenía dónde volver.
+Como una fotografía
+que conserva la misma cara
+mucho después de que esa cara
+haya aprendido otras maneras de estar en el mundo.
+La fotografía seguía intacta.
+Qué extraño.
+Cada vez que la miraba,
+parecía conocerme mejor
+de lo que yo recordaba conocerme.
+Tal vez no había perdido
+al que era antes.
+Tal vez simplemente
+había dejado de hablar su idioma.
+Las mismas palabras,
+otro peso.
+Las mismas calles,
+otra distancia.
+La misma lluvia,
+otra forma de verla caer.
+Hay cambios que no hacen ruido.
+No derriban nada.
+Solo consiguen que una casa conocida
+empiece a sentirse ligeramente extranjera.
+Y quizá eso fue lo que más me costó aceptar:
+que podía volver a casi todo
+sin volver realmente.
+Podía escuchar las mismas canciones.
+Caminar las mismas calles.
+Reconocer una ventana
+antes de doblar la esquina.
+El mapa seguía siendo correcto.
+La ciudad seguía ahí.
+Pero yo ya no sabía llegar
+al lugar exacto
+donde había vivido aquella versión de mí.
+Como si algunas ciudades
+pudieran conservarse enteras
+y, aun así,
+dejar de ser habitables.
+Durante mucho tiempo pensé
+que eso era perderse.
+Después dudé.
+Quizá perderse sea otra cosa.
+Quizá sea insistir demasiado
+en una dirección
+solo porque alguna vez
+nos llevó a casa.
+Y, sin embargo,
+hay noches en las que todavía quiero volver.
+Eso también es verdad.
+No a vos.
+A la tranquilidad de no saber
+que ciertas cosas terminan.
+A ese instante anterior
+en el que todavía no había un después.
+A la versión de mí
+que podía mirar una promesa
+sin imaginar su fecha de vencimiento.
+No sé qué hacer con él.
+Una parte de mí
+querría decirle que salió vivo.
+Otra quisiera dejarlo
+exactamente donde estaba.
+No porque haya sido mejor.
+Porque todavía no sabía
+cuánto podía perder.
+Y eso duele de una manera extraña.
+Porque si pudiera regresar,
+no volvería solo.
+Tendría que llevarme
+todo lo que aprendí después.
+La forma nueva de mirar.
+Las preguntas.
+El color.
+La costumbre de escuchar
+lo que queda cuando una canción termina.
+Tendría que devolverle al mundo
+esa parte de mí
+que ahora sabe
+que algunas cosas pueden irse
+sin dejar de existir.
+Y no sé si aceptaría el precio.
+Supongo que por eso
+hay personas que no dejan recuerdos.
+Dejan gramática.
+Después de ciertas personas,
+hasta el silencio
+parece acomodarse de otra manera.
+No porque sigan ahí.
+Porque algunas cosas,
+una vez aprendidas,
+ya no saben volver a ser desconocidas.
+Siempre dicen que el tiempo cura.
+No sé.
+Capaz que el tiempo no cure nada.
+Capaz que solamente cambie
+el lugar donde duele.
+O consiga que una herida
+deje de pedir ser llamada herida.
+Pero tampoco me convence del todo.
+Porque si sanar fuera borrar,
+¿qué hacemos con aquello
+que nos enseñó a mirar?
+Y si olvidar fuera volver
+a la forma exacta en que uno miraba antes,
+¿no sería también una forma de perder
+todo lo que vino después?
+No tengo una respuesta.
+Antes eso me habría desesperado.
+Ahora no tanto.
+Tal vez algunas preguntas
+no están hechas para cerrarse.
+Tal vez solo necesitan
+un lugar donde quedarse.
+Así que dejo que esa parte siga ahí.
+Que quiera volver algunas noches.
+Que mire hacia atrás.
+Que recuerde.
+No todo lo que sentimos
+necesita ganar una discusión.
+Todavía quisiera volver.
+Y ya no volvería.
+Las dos cosas pueden ser ciertas.
+Y quizá eso sea lo más parecido
+a estar en paz que conozco:
+no que una de las dos desaparezca,
+sino que aprendan a vivir
+sin hacerse daño.
+Después pasa el tiempo.
+No mucho.
+Lo suficiente.
+Y un día cualquiera
+vuelvo a pasar por una de esas calles.
+No fui a buscar nada.
+La calle está igual.
+La esquina.
+La ventana.
+Los árboles.
+La misma tarde cayendo sobre los edificios
+con una indiferencia casi perfecta.
+Y entonces aparece.
+Aquel color.
+El mismo que durante tanto tiempo
+había confundido con un recuerdo.
+Ahora está sobre una pared,
+en el vidrio,
+en una parte de la luz
+que dura apenas un instante.
+Me detengo.
+No porque espere que vuelvas.
+No porque quiera volver yo.
+No porque necesite entenderlo.
+Solo porque lo reconozco.
+Durante mucho tiempo
+creí que reconocer algo
+era saber de dónde venía.
+Ahora no.
+A veces basta con saber
+que alguna vez lo viste.
+La tarde sigue cayendo.
+La calle sigue siendo la misma.
+El mapa sigue guardado
+donde lo dejé.
+Y el color permanece apenas
+un segundo más
+antes de mezclarse con la noche.
+Me quedo mirando.
+Después,
+sigo caminando.`
   }
-];
+]; // end poems array
 
-// RENDER GRID
+/* RENDER GRID */
 const grid = document.getElementById('grid');
 
 function makeCard(i){
@@ -1785,6 +2491,10 @@ function makeCard(i){
   card.tabIndex = 0;
   card.setAttribute('role','button');
   card.setAttribute('aria-label', `${poems[i].title}`);
+  const bg = palette[i % palette.length];
+  const textColor = getContrastColor(bg);
+  card.style.background = `linear-gradient(135deg, ${bg}, rgba(255,255,255,0.03))`;
+  card.style.color = textColor;
   card.innerHTML = `<div>
     <div class="num">#${i+1}</div>
     <div class="label">${poems[i].title}</div>
@@ -1801,10 +2511,10 @@ function renderGrid(){
   }
 }
 
-// MODAL
+/* MODAL */
 const overlay = document.getElementById('modalOverlay');
 const modalTitle = document.getElementById('modalTitle');
-const modalBody = document.getElementById('modalBody');
+const modalBody = document.getElementById('modalBody'); // <pre>
 const closeBtn = document.getElementById('closeBtn');
 const prevBtn = document.getElementById('prevBtn');
 const nextBtn = document.getElementById('nextBtn');
@@ -1816,10 +2526,9 @@ function openModal(index){
   currentIndex = index;
   lastActive = document.activeElement;
   modalTitle.textContent = poems[index].title;
-  modalBody.textContent = poems[index].text;
+  modalBody.textContent = poems[index].text; // <pre> + textContent preserva saltos
   overlay.style.display = 'flex';
   overlay.setAttribute('aria-hidden','false');
-  // focus inside modal
   setTimeout(()=> modalBody.focus(), 60);
 }
 
@@ -1850,11 +2559,9 @@ document.addEventListener('keydown', (e)=> {
   }
 });
 
-// HERO quick open: show all poems view (same grid available by default)
-// You can make hero do something special; for now hero focuses grid on Enter
+// hero -> scroll to grid
 const heroButton = document.getElementById('heroButton');
 heroButton.addEventListener('click', ()=> {
-  // scroll to grid
   document.getElementById('main').scrollIntoView({behavior:'smooth'});
 });
 heroButton.addEventListener('keydown', e => { if(e.key === 'Enter' || e.key === ' ') { e.preventDefault(); heroButton.click(); }});
