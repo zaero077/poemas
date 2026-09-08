@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>20 poemas del amor</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="hero" id="hero" role="banner" aria-hidden="false">
+    <div class="hero-inner" tabindex="0" id="heroButton" role="button" aria-label="Abrir colección 20 poemas del amor">
+      <img src="images/cover.jpg" alt="Portada 20 poemas del amor" class="hero-img" />
+      <div class="hero-title">
+        <h1>20 poemas del amor</h1>
+        <p class="hero-sub">Haz clic para ver los poemas</p>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="grid" id="grid" aria-live="polite" aria-label="Lista de poemas"></section>
+  </main>
+
+  <div class="modal-overlay" id="modalOverlay" aria-hidden="true">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" tabindex="-1">
+      <button class="close-btn" id="closeBtn" aria-label="Cerrar poema">Cerrar ✕</button>
+      <h2 id="modalTitle"></h2>
+      <div class="modal-body" id="modalBody" tabindex="0"></div>
+      <div class="modal-foot">
+        <button id="prevBtn" class="nav-btn" aria-label="Poema anterior">◀︎ Anterior</button>
+        <button id="nextBtn" class="nav-btn" aria-label="Siguiente poema">Siguiente ▶︎</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
