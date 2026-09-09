@@ -1100,7 +1100,1402 @@ La misma secuencia produce
 resultados diferentes.
 ...` // NOTE: poem 13 is long; in your local copy ensure the full content from your original file is pasted here exactly (it continues in the original text).
   }
-  // IMPORTANT: In your local file paste Poema número 14..20 complete exactly as in the original "Nuevo Documento de texto (5).txt".
+ {
+    title: "Poema número 14",
+    text: `En Villa Serrana
+ los caminos no van en línea recta.
+Suben.
+ Bajan.
+ Desaparecen detrás de una sierra
+ y vuelven a aparecer más adelante.
+A veces uno camina durante un rato
+ sin saber si está llegando
+ o simplemente alejándose.
+Entonces pensé:
+¿Puede un camino
+ cambiar de destino
+ sin cambiar de dirección?
+Seguí caminando.
+Había una casa
+ al otro lado de la sierra.
+Desde donde estaba
+ solo podía ver una parte.
+Pensé que quizá conocer un lugar
+ era también aceptar
+ todo lo que no se puede ver.
+Y entonces:
+¿Dónde termina una persona
+ y comienza todo aquello
+ que cambió después de conocerla?
+Más tarde,
+ cuando empezó a oscurecer,
+ aparecieron algunas luces
+ entre las sierras.
+No podía saber
+ quién estaba detrás de cada ventana.
+Solo sabía
+ que estaban ahí.
+Pensé en todas las personas
+ que alguna vez estuvieron cerca
+ y que ahora existen
+ en lugares que no puedo ver.
+¿Puede una persona quedarse
+ sin quedarse?
+La noche siguió avanzando.
+Algunas cosas se vuelven más claras
+ cuando ya no podemos verlas.
+Pensé en los días que no ocurrieron,
+ en las palabras que no dijimos,
+ en todos esos futuros
+ que alguna vez fueron posibles.
+¿Puede algo que nunca ocurrió
+ dejar un recuerdo?
+Y si puede,
+¿dónde van
+ las cosas que pudieron haber sido?
+Ya no veía los caminos.
+Solo quedaba la noche
+ y esas luces pequeñas
+ que seguían encendidas
+ sin saber que alguien las estaba mirando.
+Antes de volver,
+ pensé en algo más:
+¿Puede algo terminar
+ y seguir siendo eterno?
+
+
+    `
+  }
+    
+    {
+    title: "Poema número 15",
+    text: `Hay cosas que ocurren una sola vez
+y, sin embargo, dejan la extraña sensación
+de haber estado esperando durante siglos.
+Una flor fuera de estación.
+Una canción que parece recordar un lugar
+en el que nunca estuvimos.
+Una luz detrás de una ventana
+cuando ya nadie parece estar despierto.
+Durante mucho tiempo pensé que eso era nostalgia.
+Ahora no estoy tan seguro.
+Capaz que la nostalgia no consiste en extrañar lo que perdimos.
+Capaz que consiste en reconocer algo
+antes de haberlo conocido.
+Un día, un cerezo floreció en pleno invierno.
+No era primavera.
+Eso parecía bastante claro.
+Lo extraño era que el árbol no parecía haberse equivocado.
+Florecía con una tranquilidad casi insolente,
+como si el invierno fuera el que hubiese llegado tarde.
+Pensé que era un error.
+Después pensé que quizá era memoria.
+Pero memoria me pareció una palabra demasiado cómoda.
+¿Qué puede recordar un árbol
+si nunca tuvo que aprender a olvidar?
+Capaz que las raíces recuerdan cosas
+que las hojas jamás llegaron a conocer.
+Desde entonces desconfío un poco de los calendarios.
+Quizá el tiempo no sea ese camino
+por el que todo avanza una sola vez.
+Quizá algunas cosas regresan.
+O quizá nunca se fueron.
+Tal vez una flor no aparece cuando llega la primavera.
+Tal vez aparece cuando algo,
+en alguna parte de la tierra,
+consigue recordarla.
+Y si eso fuera cierto,
+la madera también tendría memoria.
+Siempre me pareció extraño llamar madera
+a lo que queda de un árbol
+cuando todavía conserva casi todo lo que era.
+Capaz que un piano sea solamente eso:
+un árbol que encontró una forma más lenta
+de recordar el viento.
+A veces una tecla baja
+y durante un instante parece que una rama
+estuviera intentando volver al cielo.
+No sé por qué pensé en eso.
+Quizá porque hay cosas que cambian de forma
+sin dejar de pertenecer a lo que fueron.
+O quizá para conservar algo
+a veces haya que dejar de ser aquello que lo guardaba.
+Entonces escuché una canción terminar.
+Una nota se apagó.
+Después otra.
+Y quedó ese pequeño silencio
+que siempre había creído vacío.
+Ahora ya no.
+Porque hay silencios que parecen estar esperando.
+No sé qué.
+Y fue ahí cuando pensé en una octava nota.
+Siempre pensé que sería una más.
+Algo después del si,
+una tecla que nadie había construido.
+Pero quizá no.
+Quizá estaría en ese instante en que una nota termina
+y el silencio todavía conserva su forma.
+A veces imagino que, si alguna vez sonara,
+no cambiaría la canción.
+Cambiaría todo lo que habíamos escuchado antes de ella.
+El mismo piano.
+Las mismas teclas.
+La misma melodía.
+Y, sin embargo, algo habría cambiado tan profundamente
+que parecería que la canción acabara de recordar su propio nombre.
+Capaz que por eso no puedo decidir
+si esa nota falta
+o si todavía no ha ocurrido.
+Aunque las dos cosas no deberían significar lo mismo.
+Una pertenece al pasado.
+La otra, a algo que todavía no llega.
+Y quizá la diferencia sea solamente nuestra.
+Quizá hay cosas que empiezan a existir
+mucho antes de suceder.
+Por eso, cuando pienso en la octava,
+no imagino un sonido.
+Imagino un lugar.
+Un pequeño espacio entre dos notas
+que nunca me había parecido importante
+hasta que empecé a sospechar que podía contener una canción entera.
+Después me parece absurdo.
+Un piano tiene siete notas naturales.
+Las aprendimos.
+Las nombramos.
+Las ordenamos.
+Durante siglos hicieron falta para decir casi todo.
+¿Para qué habría de faltar una más?
+Aunque quizá esa sea la pregunta equivocada.
+Capaz que la octava no sea la que falta.
+Capaz que sea la que vuelve insuficientes a las otras siete.
+Y no sé si eso es mejor.
+Porque entonces una canción que siempre creí completa
+habría estado esperando algo
+sin saber siquiera qué esperaba.
+Pienso en eso y vuelvo al cerezo.
+No sé por qué siempre termino ahí.
+Quizá porque fue la primera cosa que no obedeció al tiempo
+y, en lugar de explicarse, floreció.
+Durante unos días, el invierno pasó debajo de sus ramas
+sin tocar las flores.
+Me gusta pensar que el árbol sabía algo.
+Aunque quizá solo lo inventé después.
+También puede ser que un cerezo sea solamente un cerezo.
+A veces conviene recordar eso.
+Que las cosas no tienen por qué guardar secretos
+para ser hermosas.
+Pero entonces pienso en la luz.
+Siempre nos dijeron que los agujeros negros la devoran.
+Y devorar me parece una palabra demasiado definitiva.
+Capaz que no la devoran.
+Capaz que la guardan.
+Para después.
+Para una noche suficientemente profunda.
+Para un color que todavía no existe.
+Para una nota que todavía no encontró
+con qué acompañarse.
+Sé que suena absurdo.
+Una luz esperando un color.
+Un color esperando una nota.
+La oscuridad conservando algo
+que no podemos ver.
+Pero una semilla tampoco se parece mucho a un árbol.
+Pasa meses bajo la tierra
+sin parecerse en absoluto a aquello que será.
+Y nadie dice que está perdida.
+Quizá la oscuridad también sea una forma de guardar.
+Quizá por eso algunas cosas necesitan desaparecer
+antes de encontrar la forma correcta de volver.
+No sé.
+Ya estoy haciendo otra vez lo mismo.
+Juntando cosas que no deberían tener nada que ver.
+Un cerezo.
+Un piano.
+Una nota imposible.
+Un agujero negro.
+Una luz que quizá no se perdió.
+Una semilla enterrada.
+Y, como si fuera poco, una telaraña.
+La vi después de la lluvia.
+El rocío había quedado prendido de cada hilo
+como si alguien hubiese dibujado constelaciones
+sobre algo demasiado pequeño para llamarse cielo.
+Pensé que las arañas tejían para atrapar.
+Después pensé que quizá no.
+Quizá estaban cosiendo.
+No insectos.
+El espacio entre las cosas.
+Lo extraño de un hilo
+es que solo aparece cuando dos lugares están separados.
+Y, sin embargo, en cuanto aparece,
+la distancia deja de ser completamente distancia.
+Me quedé mirándolo un rato.
+Una sola gota parecía suficiente para romperlo.
+Y, aun así, la mañana entera estaba suspendida sobre él.
+Capaz que eso también sea la música.
+Algo demasiado frágil para sostenerse
+y, sin embargo, capaz de mantener unido
+lo que se caería sin ella.
+Ya sé.
+Estoy buscando demasiado.
+Quizá una telaraña sea solamente una telaraña.
+Quizá los agujeros negros no guardan nada.
+Quizá la madera no recuerda el viento.
+Quizá aquel cerezo simplemente floreció antes de tiempo.
+Y quizá un piano tiene siete notas
+porque siete fueron suficientes.
+Por un momento incluso pensé
+que la octava nota nunca había existido.
+Que era solamente una forma bonita
+de explicar esa sensación absurda
+de que algunas canciones terminan
+y todavía dejan algo sin decir.
+Me convencí casi.
+Hasta que recordé el principio.
+Aquello que uno reconoce
+antes de haberlo conocido.
+Y entonces ya no pude decidir
+si estaba pensando en música
+o en otra cosa.
+Porque hay canciones que no parecen nuevas
+cuando finalmente las escuchamos.
+Parecen regresos.
+Hay lugares donde nunca estuvimos
+que pueden resultar familiares.
+Hay nombres que, antes de significar nada,
+ya parecen llevar muchísimo tiempo esperando una voz.
+Y quizá por eso algunas cosas
+no llegan realmente.
+Quizá encuentran una forma de regresar.
+Entonces vuelvo a pensar en el cerezo.
+Y ya no sé si floreció fuera de estación.
+Capaz que la primavera no siempre llega desde el futuro.
+Capaz que, algunas veces,
+regresa desde la memoria.
+Y quizá la madera tampoco dejó de ser árbol.
+Quizá el árbol encontró otra forma de seguir escuchando.
+Quizá la luz no desapareció.
+Quizá solo cambió de lugar
+hasta que exista algo capaz de devolverle un nombre.
+Y quizá el silencio tampoco esté vacío.
+Quizá guarda cosas
+que todavía no sabemos perder.
+A veces pienso que el universo lleva miles de millones de años afinándose.
+Después pienso que es una idea ridícula.
+Que las estrellas son solamente estrellas.
+Que el invierno es invierno.
+Que los árboles florecen cuando tienen que florecer.
+Que la noche no espera nada.
+Que una canción termina cuando termina.
+Me gustaría creerlo.
+Sería más fácil.
+Pero hay algo que no consigo explicar.
+Si todo está exactamente como debería estar,
+¿por qué algunas cosas producen esa extraña sensación
+de haber dejado un sitio preparado para algo?
+No un vacío.
+Un sitio.
+Como si la ausencia pudiera tener forma.
+Como si ciertas cosas, antes de llegar,
+ya estuvieran modificando el espacio que algún día ocuparían.
+Y quizá ahí está el verdadero problema.
+No sé si la octava nota es algo que falta.
+Tal vez sea algo que hace que podamos notar que faltaba.
+No sé si eso tiene sentido.
+A veces las ideas más extrañas
+se vuelven difíciles de abandonar
+justamente porque ninguna explicación sencilla consigue reemplazarlas.
+Así que vuelvo al piano.
+A las siete notas.
+A ese pequeño silencio entre una y otra.
+A la madera que quizá todavía recuerda el bosque.
+Y pienso que tal vez una octava nota no tendría que sonar nunca.
+Tal vez bastaría con que existiera
+para que todas las demás
+dejaran de sonar exactamente igual.
+Después me pregunto si eso no fue lo que ocurrió siempre.
+Con el cerezo.
+Con la luz.
+Con la noche.
+Con las cosas que parecían completas
+hasta que apareció algo que las hizo mirar de otra manera.
+Capaz que por eso la belleza nos confunde.
+Porque no siempre añade algo.
+A veces simplemente revela
+lo que ya estaba ahí.
+Y quizá el universo no esté lleno de cosas que nacen.
+Quizá esté lleno de cosas que intentan volver.
+No sé.
+Tal vez mañana piense que todo esto es una forma demasiado hermosa de equivocarme.
+Ojalá.
+Porque si no lo fuera,
+habría algo todavía más extraño que una octava nota:
+un mundo entero
+que lleva miles de millones de años
+aprendiendo a reconocerla.
+Y desde entonces, cuando un piano deja un silencio demasiado largo entre dos notas,
+ya no intento llenarlo.
+Espero.
+No porque sepa qué viene después.
+Sino porque quizá algunas cosas no llegan a nuestras vidas.
+Quizá nuestras vidas pasan muchísimo tiempo
+aprendiendo a reconocerlas.
+Y quizá, cuando por fin ocurren,
+no escuchamos nada.
+Solo miramos alrededor.
+Un poco confundidos.
+Como un cerezo en pleno invierno.
+Como una luz detrás de una ventana vacía.
+Como una tecla que todavía no ha sido tocada.
+Y durante un instante, sin saber por qué,
+todo parece estar exactamente en su lugar.
+Hasta el silencio.
+Especialmente el silencio.
+
+
+    `
+  }
+{
+    title: "Poema número 16",
+    text: `En Minas
+ las sierras nunca terminan
+ en la parte que vemos.
+Una aparece detrás de otra,
+ y detrás de esa
+ otra más.
+Como si la tierra
+ hubiera aprendido a guardar
+ un paisaje
+ dentro de otro.
+Caminamos.
+El camino subía
+ sin decirnos adónde.
+En cada curva
+ parecía cambiar de destino
+ sin cambiar de dirección.
+Vos caminabas a mi lado.
+Entre dos piedras
+ había una flor.
+El sol estaba detrás de nosotros,
+ pero la flor
+ había crecido inclinada
+ hacia donde estabas vos.
+No la tocamos.
+Seguimos.
+Llegamos al arroyo.
+El agua venía de arriba
+ y antes de llegar a nosotros
+ había pasado por lugares
+ que nunca conoceríamos.
+La metiste entre tus manos.
+Por un instante
+ el agua pareció quedarse.
+Después siguió.
+Me pregunté cuántas montañas
+ podían caber en un río
+ sin que ninguna de ellas
+ apareciera en el paisaje.
+Más adelante
+ el camino se dividió.
+Uno bajaba.
+El otro desaparecía
+ detrás de una sierra.
+Elegimos el primero.
+El segundo quedó allí,
+ doblando entre los árboles
+ hacia un lugar
+ al que nunca llegaríamos.
+Pero durante unos metros
+ caminamos junto a él
+ sin verlo.
+La tarde empezó a apagarse.
+Dijiste mi nombre.
+El cerro lo tomó.
+Esperó.
+Y cuando lo devolvió
+ ya había pasado por otro lugar.
+Lo dijiste otra vez.
+El eco tardó más.
+Parecía que la montaña
+ estaba aprendiendo
+ una palabra que antes
+ no existía.
+Seguimos.
+Una nube atravesó las sierras.
+Durante unos segundos
+ una montaña tuvo la sombra
+ de otra montaña.
+Después la nube pasó.
+Cada una volvió a ser
+ solamente ella misma.
+Llegamos arriba.
+Desde allí
+ el pueblo parecía pequeño.
+Las primeras luces
+ comenzaban a encenderse.
+Una.
+Otra.
+Otra.
+Hasta que las casas
+ parecieron tener dentro
+ pequeños lugares donde la noche
+ todavía no había entrado.
+Nos sentamos sobre una piedra.
+El sol ya había desaparecido.
+La noche avanzaba
+ por las sierras.
+Pero la piedra seguía tibia.
+Apoyé la mano.
+Vos apoyaste la tuya al lado.
+Nos quedamos así
+ hasta que el frío llegó
+ a nuestros dedos.
+Entonces nos levantamos.
+Empezamos a bajar.
+La piedra quedó arriba.
+No volvimos a tocarla.
+En la última curva
+ miré hacia atrás.
+Era apenas una piedra
+ perdida entre miles.
+Y, sin embargo,
+debajo de nuestras manos
+ todavía guardaba
+ la tarde entera.
+
+
+    `
+  }
+{
+    title: "Poema número 17",
+    text: `Todavía no te moviste
+y ya hice lugar.
+No sé cuándo aprendí
+a saber esas cosas.
+Tu mano busca el borde de la mesa
+antes de tocarlo
+y yo retiro el vaso.
+Te quedás callada
+un poco antes
+de estar verdaderamente callada.
+Hay una pausa
+que te pertenece.
+La reconozco
+antes de escucharla.
+A veces decís una palabra
+y yo ya estoy sonriendo.
+No por lo que significa.
+Por lo que viene después.
+También vos conocés
+algunas de mis cosas
+antes de que sucedan.
+La forma en que voy a cerrar una puerta.
+El segundo exacto
+en que voy a volver a mirarte.
+Dónde voy a dejar la mano
+cuando me acerque.
+Es extraño.
+Cada uno sigue llegando
+desde su propio lado
+y, sin embargo,
+hay momentos
+en que ninguno de los dos
+parece llegar primero.
+Como si entre tu movimiento
+y el mío
+hubiera otro.
+Uno pequeño.
+Casi imposible de ver.
+A veces aparece cuando caminamos.
+No damos el mismo paso.
+Ni siquiera caminamos igual.
+Vos adelantás uno.
+Yo otro.
+Pero las piernas encuentran
+una velocidad
+que ninguno tenía.
+Y durante unas cuadras
+parece que la calle
+hubiera aprendido
+a llevarnos.
+Una noche
+te quedaste dormida
+antes que yo.
+Escuché cómo cambiaba
+tu respiración.
+Después la mía.
+No fue al mismo tiempo.
+Fue apenas después.
+Como si una hubiera dejado
+una puerta abierta
+y la otra supiera
+que podía cruzarla.
+Me pregunto
+cuántas cosas aprendimos así.
+Sin decirlas.
+Sin decidirlas.
+Sin saber siquiera
+que estaban aprendiendo.
+Porque ahora hay gestos
+que no recuerdo haber hecho
+por primera vez.
+Solo sé
+que existen.
+Como ciertas palabras
+que aparecen en un idioma
+antes de que alguien
+las invente.
+Como si hubiéramos dejado
+pequeñas marcas
+en lugares donde todavía
+no habíamos estado.
+Y a veces pienso
+que eso es lo extraño
+de estar tan cerca de alguien.
+No que termine conociendo
+tus movimientos.
+Sino que empiezo
+a dejar espacio
+para movimientos
+que todavía no hiciste.
+Una tarde te fuiste.
+Escuché tus pasos
+bajar la escalera.
+Esperé el ascensor.
+Después la puerta.
+Y cuando la cerraste
+la habitación volvió a quedarse quieta.
+Yo también.
+Pero al levantarme
+me corrí unos centímetros
+sin pensarlo.
+Como hago cuando te acercás.
+Me quedé así
+un momento.
+Mirando ese espacio.
+No faltaba nadie.
+Y, sin embargo,
+todavía estaba ocupado.
+Por algo
+que ninguno de los dos
+había hecho.
+Quizá eso sea
+lo que aparece entre dos ritmos.
+No uno que reemplaza
+al de cada uno.
+No uno que los vuelve iguales.
+Algo más pequeño.
+Algo que existe
+solo mientras uno
+ya está respondiendo
+a lo que el otro
+todavía no hizo.
+Algo que empieza
+entre un segundo y el siguiente
+y que, cuando te vas,
+tarda un poco
+en desaparecer.
+
+
+    `
+  }
+
+{
+    title: "Poema número 18",
+    text: `He permanecido en la misma pared
+más tiempo del que puedo recordar.
+Aunque recordar
+no sea una palabra
+que me corresponda.
+Yo cuento.
+He visto llegar personas
+que todavía no sabían
+que estaban llegando a alguien.
+He visto una silla ocupada
+durante cuarenta minutos
+por alguien que miraba la puerta.
+Cuarenta minutos.
+Los mismos segundos
+que cualquier otra hora.
+Cuando la puerta finalmente se abrió,
+aquella persona sonrió
+como si el tiempo que había pasado
+pudiera desaparecer
+solo porque alguien había llegado.
+Yo conservé cada segundo.
+Ellos no.
+Una vez vi dos manos tocarse.
+No duró mucho.
+Mis agujas apenas tuvieron tiempo
+de avanzar unos cuantos números.
+Después volvieron a tocarse
+durante años.
+Nunca entendí
+cómo un instante tan pequeño
+podía tener una continuación tan grande.
+He visto noches
+que terminaron demasiado pronto.
+Otras que parecían no terminar nunca.
+Pero las dos terminaron
+cuando mi aguja llegó al mismo lugar.
+Entonces apareció en mí
+una pregunta que no sabía
+que un reloj podía hacerse:
+¿por qué un minuto puede ser eterno
+si siempre dura un minuto?
+Seguí contando.
+Una tarde alguien recibió una noticia.
+No escuché las palabras.
+Solo vi cómo se quedó quieto.
+Durante varios segundos
+nadie hizo nada.
+El reloj siguió avanzando.
+Después alguien lo abrazó.
+Después alguien lloró.
+Después alguien salió de la habitación.
+Yo marqué cada instante.
+Ninguno se detuvo.
+Más tarde comprendí
+que esa era la pregunta
+que más veces había visto
+sin haberme atrevido a formularla:
+¿por qué no se detuvo?
+¿Por qué el segundo siguiente
+tuvo que llegar
+si el anterior
+ya había sido suficiente?
+He visto nacimientos.
+He visto despedidas.
+He visto personas decir
+“para siempre”
+y volver a quedarse solas.
+He visto a alguien besar
+como si el mundo acabara después.
+El mundo no acabó.
+11:48:03.
+11:48:04.
+11:48:05.
+También he visto morir personas.
+Nunca supe
+qué número merecía una muerte.
+Mis agujas tampoco.
+Solo avanzaron.
+Después de una muerte
+siempre hubo un segundo siguiente.
+Después de una despedida
+también.
+Después de un primer beso.
+Después de una última palabra.
+Siempre.
+Y empecé a sospechar
+que quizá esa era la única crueldad
+que podía atribuirle al tiempo:
+no saber cuándo algo
+ya había sido suficiente.
+Una puerta podía cerrarse
+y mi aguja seguir avanzando.
+Una persona podía irse
+y mi aguja seguir avanzando.
+Una vida podía terminar
+y mi aguja seguir avanzando.
+Yo podía decir exactamente
+cuánto había durado una vida.
+Nunca cuánto había cabido dentro de ella.
+A veces alguien volvía
+a la misma hora
+muchos años después.
+Mis agujas ocupaban
+exactamente el mismo lugar.
+Pero esa persona
+ya no miraba la habitación
+de la misma manera.
+Entonces entendí
+que quizá una hora no volvía.
+Solo volvía su número.
+El número podía repetirse.
+La hora no.
+Quizá por eso
+podían recordar un momento
+sin estar nuevamente en él.
+Yo no tenía esa diferencia.
+Para mí,
+las 11:48 siempre eran las 11:48.
+Para ellos,
+a veces una hora podía quedarse
+mucho después de haber terminado.
+Quizá las personas sabían algo
+que yo no.
+Ellas podían perder el tiempo.
+Yo no.
+Podían olvidar una tarde.
+Yo conservaba cada segundo.
+Podían decir
+“se pasó volando”.
+Yo sabía que no.
+Habían pasado los mismos minutos
+que siempre.
+Entonces comprendí algo peor.
+Quizá lo que yo llamaba tiempo
+y lo que ellos llamaban tiempo
+no era lo mismo.
+Yo sabía cuánto duraba.
+Ellos sabían cuánto dejaba.
+Y todavía no sé
+qué respuesta pertenece a quién.
+Solo sé que he pasado mi existencia
+viendo cosas
+que deberían haber detenido el mundo.
+Ninguna consiguió detener un segundo.
+Quizá no podía entenderlo
+porque era un reloj.
+Quizá porque nuncaDuermes.
+De espaldas.
+La sábana se ha enredado
+en una de tus piernas
+y un mechón de pelo
+te cruza la boca.
+Lo aparto.
+Sigues dormida.
+A veces pienso
+que mientras duermes
+eres la persona que menos conozco.
+Puedes estar ahora mismo
+en una casa que nunca vi,
+hablando con alguien
+cuyo rostro no existe,
+mirando un mar
+que no está en ningún mapa.
+Yo también me voy.
+Anoche soñé
+que el cielo estaba
+debajo del suelo
+y que había que levantar la tierra
+para poder mirar las estrellas.
+No estabas.
+Sin embargo,
+al despertarme
+tenía tu mano cerrada entre las mías.
+No recuerdo
+cuándo ocurrió.
+Tal vez mientras yo corría
+por aquella ciudad imposible.
+Tal vez mientras tú
+cruzabas algún lugar
+que nunca conoceré.
+A las tres y diecisiete
+te alejaste.
+A las tres y veintidós
+volviste.
+No abriste los ojos.
+Yo tampoco.
+La distancia apareció
+y después dejó de existir
+sin que ninguno de los dos
+estuviera despierto
+para verlo.
+Hay noches
+en que no sé dónde estás.
+Solo sé
+que estás aquí.
+Tu respiración cambia.
+El cuarto cambia con ella.
+Una vez,
+mientras dormías,
+dijiste mi nombre.
+Lo dijiste como si
+yo estuviera lejos.
+Estaba a menos de un metro.
+No te desperté.
+Me quedé escuchando
+cómo volvías
+a un lugar
+donde yo no podía entrar.
+Después te acercaste.
+Tu frente encontró mi hombro.
+Y por unos minutos
+la noche tuvo tu respiración
+y la mía
+en el mismo sitio.
+No recuerdo
+qué soñé después.
+Tú tampoco recordarás
+esto.
+Quizá mañana
+solo quede una pequeña marca
+en la almohada,
+un pelo sobre mi pecho,
+la sábana torcida
+hacia un lado.
+Nada que pueda contarse.
+Nada que pueda fotografiarse.
+Pero durante la noche
+ocurrió algo
+que ninguno de los dos
+estuvo despierto
+para presenciar.
+Sale el sol.
+La habitación recupera
+sus cosas.
+La ventana.
+La silla.
+El vaso de agua.
+Tu cara.
+Abres los ojos
+y durante unos segundos
+todavía estás lejos.
+Después me miras.
+Y antes de decir nada
+te acercas.
+Como si hubieras pasado
+toda la noche
+volviendo.
+7 había esperado a nadie.
+Quizá porque nunca había querido
+que una hora durara un poco más.
+Quizá me faltaba conciencia.
+Quizá me sobraba conciencia.
+
+
+    `
+  }
+
+{
+    title: "Poema número 19",
+    text: `Te amo
+como los árboles aman la lluvia:
+sin intentar retenerla,
+sin preguntarle al cielo
+cuánto tiempo piensa quedarse.
+Hay algo hermoso
+en aquello que llega
+sabiendo que algún día
+también tendrá que irse.
+Antes de conocerte
+creía que los colores
+eran una forma de ordenar el mundo.
+Que había blancos
+para las cosas puras,
+negros
+para las cosas perdidas,
+y todos los demás colores
+intentando encontrar
+un lugar entre ambos.
+Después llegaste vos
+y descubrí
+que existen colores
+que no pertenecen a ningún lado.
+Mujer de corazón gris,
+tu corazón tiene el color
+de las páginas que quedaron vivas
+después de demasiadas historias.
+Páginas donde todavía se alcanzan a leer
+las frases que alguien quiso borrar.
+Porque hay palabras
+que no desaparecen cuando se borran.
+Se quedan viviendo
+en la forma que toma la hoja
+después de haberlas perdido.
+Quizás por eso
+cuando miro tus ojos
+pienso en las estrellas antiguas.
+No en aquellas
+que brillan porque todavía nacen.
+Sino en las que llevan millones de años
+viajando por la oscuridad
+con la memoria
+de todos los fuegos
+que alguna vez fueron.
+Hay una clase de luz
+que solamente aparece
+después de haber atravesado
+lugares donde nadie podía verla.
+Vos tenés esa luz.
+La de las cosas
+que no salieron intactas del tiempo,
+pero encontraron una manera
+de seguir siendo hermosas.
+Tu corazón parece
+una montaña escrita con ceniza.
+Cada capa guarda
+un incendio antiguo.
+Cada piedra conserva
+el rumor de algo
+que alguna vez quiso romperla.
+Y aun así,
+ahí está.
+Quieto.
+Sosteniendo el cielo.
+Como si hubiera aprendido
+que incluso el fuego
+puede convertirse
+en paisaje.
+Por eso amo tus inviernos.
+No porque quiera verlos terminar.
+Hay árboles
+que durante meses
+parecen haber olvidado
+cómo se vuelve a florecer.
+Pero debajo de la corteza
+la primavera trabaja en silencio.
+Sin aplausos.
+Sin promesas.
+Preparando una hoja
+que todavía nadie conoce.
+Quizás algunas personas
+son así.
+Guardan estaciones enteras
+en lugares
+donde nadie mira.
+No quiero conocer solamente
+la parte de vos
+que sabe sonreír.
+Quiero también
+esa habitación cerrada
+donde dejás las cosas
+que todavía no tienen nombre.
+Porque hay silencios
+que parecen vacíos
+hasta que alguien aprende
+a escucharlos.
+La noche siempre me pareció distinta
+desde que te conozco.
+La luz no pelea contra ella.
+La noche es el lugar
+donde la luz guarda
+todo aquello
+que todavía no sabe decir.
+Tal vez por eso
+tus sombras nunca me asustaron.
+Hay lugares del universo
+donde las estrellas nacen
+de la misma oscuridad
+que parecía querer tragarlas.
+Y quizás el alma también funciona así.
+Cuando entrás en una habitación
+algo extraño sucede.
+La madera recuerda al árbol.
+El vidrio recuerda la arena
+que alguna vez fue océano.
+La piedra recuerda la montaña
+antes de aprender
+a quedarse quieta.
+Como si tu presencia
+le devolviera a las cosas
+la vida que tuvieron
+antes de convertirse
+en otra cosa.
+Hay grietas
+que parecen guardar secretos
+más antiguos que la pared.
+Hay casas
+que aprendieron a recibir el sol
+por lugares
+donde alguna vez entró la lluvia.
+Hay personas
+que llevan sus marcas
+como mapas de territorios
+que solo ellas pudieron atravesar.
+Mujer de corazón gris,
+tu corazón es una ciudad
+construida alrededor de una ruina
+que nadie quiso derribar.
+Y quizás esa sea
+la razón de su belleza.
+Porque hay lugares
+que serían más fáciles de entender
+si borráramos su historia.
+Pero perderían
+todo aquello
+que los hizo únicos.
+No sos una primavera eterna.
+Las primaveras perfectas
+duran demasiado poco.
+Sos ese instante extraño
+donde un árbol conserva
+una última hoja del otoño
+mientras debajo de la tierra
+ya comienza otra vida.
+Sos una estación
+que ningún calendario pudo nombrar.
+Un clima propio.
+Una forma del mundo
+que aparece
+cuando dos cosas opuestas
+dejan de intentar vencerse.
+Y ahora entiendo
+por qué existe el gris.
+No porque sea la mitad
+de algo.
+Sino porque hay cosas
+demasiado profundas
+para entrar completas
+en un solo color.
+Desde que llegaste,
+mi manera de mirar cambió.
+Ahora sé
+que los ríos no llevan solamente agua.
+También llevan montañas
+que aprendieron a viajar.
+Que las piedras no son solamente piedra.
+También son tiempo
+que decidió quedarse quieto.
+Que las personas
+no son solamente
+lo que muestran.
+También son todo aquello
+que sigue creciendo
+en silencio.
+Y cuando te miro,
+mujer de corazón gris,
+entiendo algo
+que el mundo llevaba siglos intentando decir:
+que algunas almas
+no fueron hechas
+para ser completamente luz
+ni completamente sombra.
+Fueron hechas
+para demostrar
+que entre ambas
+todavía existe
+un universo entero.
+
+
+    `
+  }
+
+{
+    title: "Poema número 20",
+    text: `No fue amor lo que hiciste.
+O eso pensé durante mucho tiempo.
+Fue una grieta con nombre propio,
+una forma elegante de romperme
+sin hacer demasiado ruido.
+Porque lo que vos llamabas luz
+a mí me dejó viendo sombras
+incluso con los ojos abiertos.
+Y durante un tiempo
+creí que el problema era que todavía estabas.
+En ciertas canciones.
+En algunas calles.
+En esa hora de la tarde
+en la que las ventanas empiezan a encenderse
+antes de que uno se dé cuenta de que oscureció.
+Así que hice lo que hacen casi todos
+cuando algo se niega a terminar:
+me fui.
+Cambié de calles,
+de rutinas,
+de cielos.
+Dejé que pasaran los días
+con esa paciencia que tienen los trenes
+cuando uno los ve alejarse
+sin saber quién viaja adentro.
+Pensé que la distancia
+haría su trabajo.
+Que el tiempo terminaría
+por borrar los lugares
+donde todavía aparecías.
+Funcionó durante un rato.
+Después entendí que hay cosas
+que no viven en los lugares.
+Viven en la manera de mirarlos.
+Una tarde volvió aquel color.
+El mismo que apareció una vez
+sin que el mundo pareciera haber cambiado.
+Durante mucho tiempo pensé
+que había llegado con vos.
+Lo busqué después en el mar,
+en las hojas,
+en las vidrieras cuando cae la tarde.
+A veces aparecía.
+A veces no.
+Y pensé que eso significaba
+que todavía te extrañaba.
+Que mientras siguiera encontrándolo,
+seguías ahí de alguna manera.
+Hasta que recordé a Benedetti.
+No la frase.
+La idea.
+Esa pelea silenciosa
+entre la cabeza que quiere echar algo
+y el corazón que insiste
+en dejarlo entrar.
+Benedetti tenía razón, supongo.
+Aunque quizá ninguno de los dos
+entendió del todo el problema.
+Hay cosas que no permanecen
+ni en la cabeza ni en el corazón.
+Se quedan en la mirada.
+Y entonces me pregunté
+qué quedaba por olvidar.
+No encontré tu nombre.
+Ni tu voz.
+Ni tus manos.
+Encontré otra cosa.
+La forma en que una tarde
+podía parecerme distinta.
+La forma en que una canción
+podía dejar un segundo de silencio
+y hacer que yo escuchara más.
+La forma en que cierta luz
+todavía conseguía detenerme.
+El color.
+El color nunca fue tuyo.
+No lo habías traído.
+No te lo llevaste.
+Solo apareció
+cuando mis ojos aprendieron a verlo.
+Y eso dejó una pregunta
+que tardé mucho en hacerme:
+si ya no estabas
+en los lugares donde te buscaba,
+¿qué se suponía que debía hacer
+con todo lo que había cambiado
+mientras estabas?
+Durante mucho tiempo pensé
+que lo que quería era volver.
+No a vos.
+A mí.
+Volví a los mismos lugares
+con una excusa distinta cada vez.
+Una canción que ya no escuchaba.
+Una calle por la que hacía años no pasaba.
+Alguna costumbre que había dejado caer
+sin darme cuenta.
+Pensé que, si encontraba suficientes cosas
+que todavía se parecieran a mí,
+tal vez aparecería también
+la persona que había sido.
+Pero las calles seguían ahí.
+La misma esquina.
+La misma ventana.
+La misma tarde cayendo sobre los edificios
+con una indiferencia casi perfecta.
+Y yo seguía sin encontrarme.
+Al principio culpé al tiempo.
+Después a la distancia.
+Después, un poco,
+al amor.
+Me molestaba reconocer en mí
+cosas que antes no estaban.
+Una forma distinta de escuchar ciertas palabras.
+Una desconfianza que no había pedido.
+La costumbre de mirar una despedida
+como si ya llevara meses ocurriendo
+antes de que alguien pronunciara adiós.
+No sabía si llamarlas heridas
+o simplemente otra forma de piel.
+A veces pensaba
+que todo habría sido más sencillo
+si hubiera salido de aquello
+exactamente como había entrado.
+Pero algo en mí se resistía
+a esa idea.
+Porque también habían quedado cosas
+que no quería perder.
+La paciencia con algunas tardes.
+La costumbre de escuchar
+un poco más después de que termina una canción.
+La capacidad de detenerme
+ante ciertas luces
+sin saber por qué.
+Y aquel color.
+Siempre aquel color.
+Durante un tiempo pensé
+que para volver
+tendría que devolver todo eso.
+Como si crecer fuera una habitación
+de la que uno pudiera salir
+dejando las cosas en el suelo
+antes de cerrar la puerta.
+Pero no sabía qué tendría que llevarme conmigo.
+¿La forma nueva de mirar?
+¿Las preguntas?
+¿Todo aquello que aprendí
+a fuerza de perder?
+¿También tendría que olvidar
+que algunas promesas pesan más
+después de haberlas visto romperse?
+Ahí la idea empezó a cambiar.
+Quizá no estaba intentando volver.
+Quizá estaba intentando
+encontrar a alguien
+que ya no tenía dónde volver.
+Como una fotografía
+que conserva la misma cara
+mucho después de que esa cara
+haya aprendido otras maneras de estar en el mundo.
+La fotografía seguía intacta.
+Qué extraño.
+Cada vez que la miraba,
+parecía conocerme mejor
+de lo que yo recordaba conocerme.
+Tal vez no había perdido
+al que era antes.
+Tal vez simplemente
+había dejado de hablar su idioma.
+Las mismas palabras,
+otro peso.
+Las mismas calles,
+otra distancia.
+La misma lluvia,
+otra forma de verla caer.
+Hay cambios que no hacen ruido.
+No derriban nada.
+Solo consiguen que una casa conocida
+empiece a sentirse ligeramente extranjera.
+Y quizá eso fue lo que más me costó aceptar:
+que podía volver a casi todo
+sin volver realmente.
+Podía escuchar las mismas canciones.
+Caminar las mismas calles.
+Reconocer una ventana
+antes de doblar la esquina.
+El mapa seguía siendo correcto.
+La ciudad seguía ahí.
+Pero yo ya no sabía llegar
+al lugar exacto
+donde había vivido aquella versión de mí.
+Como si algunas ciudades
+pudieran conservarse enteras
+y, aun así,
+dejar de ser habitables.
+Durante mucho tiempo pensé
+que eso era perderse.
+Después dudé.
+Quizá perderse sea otra cosa.
+Quizá sea insistir demasiado
+en una dirección
+solo porque alguna vez
+nos llevó a casa.
+Y, sin embargo,
+hay noches en las que todavía quiero volver.
+Eso también es verdad.
+No a vos.
+A la tranquilidad de no saber
+que ciertas cosas terminan.
+A ese instante anterior
+en el que todavía no había un después.
+A la versión de mí
+que podía mirar una promesa
+sin imaginar su fecha de vencimiento.
+No sé qué hacer con él.
+Una parte de mí
+querría decirle que salió vivo.
+Otra quisiera dejarlo
+exactamente donde estaba.
+No porque haya sido mejor.
+Porque todavía no sabía
+cuánto podía perder.
+Y eso duele de una manera extraña.
+Porque si pudiera regresar,
+no volvería solo.
+Tendría que llevarme
+todo lo que aprendí después.
+La forma nueva de mirar.
+Las preguntas.
+El color.
+La costumbre de escuchar
+lo que queda cuando una canción termina.
+Tendría que devolverle al mundo
+esa parte de mí
+que ahora sabe
+que algunas cosas pueden irse
+sin dejar de existir.
+Y no sé si aceptaría el precio.
+Supongo que por eso
+hay personas que no dejan recuerdos.
+Dejan gramática.
+Después de ciertas personas,
+hasta el silencio
+parece acomodarse de otra manera.
+No porque sigan ahí.
+Porque algunas cosas,
+una vez aprendidas,
+ya no saben volver a ser desconocidas.
+Siempre dicen que el tiempo cura.
+No sé.
+Capaz que el tiempo no cure nada.
+Capaz que solamente cambie
+el lugar donde duele.
+O consiga que una herida
+deje de pedir ser llamada herida.
+Pero tampoco me convence del todo.
+Porque si sanar fuera borrar,
+¿qué hacemos con aquello
+que nos enseñó a mirar?
+Y si olvidar fuera volver
+a la forma exacta en que uno miraba antes,
+¿no sería también una forma de perder
+todo lo que vino después?
+No tengo una respuesta.
+Antes eso me habría desesperado.
+Ahora no tanto.
+Tal vez algunas preguntas
+no están hechas para cerrarse.
+Tal vez solo necesitan
+un lugar donde quedarse.
+Así que dejo que esa parte siga ahí.
+Que quiera volver algunas noches.
+Que mire hacia atrás.
+Que recuerde.
+No todo lo que sentimos
+necesita ganar una discusión.
+Todavía quisiera volver.
+Y ya no volvería.
+Las dos cosas pueden ser ciertas.
+Y quizá eso sea lo más parecido
+a estar en paz que conozco:
+no que una de las dos desaparezca,
+sino que aprendan a vivir
+sin hacerse daño.
+Después pasa el tiempo.
+No mucho.
+Lo suficiente.
+Y un día cualquiera
+vuelvo a pasar por una de esas calles.
+No fui a buscar nada.
+La calle está igual.
+La esquina.
+La ventana.
+Los árboles.
+La misma tarde cayendo sobre los edificios
+con una indiferencia casi perfecta.
+Y entonces aparece.
+Aquel color.
+El mismo que durante tanto tiempo
+había confundido con un recuerdo.
+Ahora está sobre una pared,
+en el vidrio,
+en una parte de la luz
+que dura apenas un instante.
+Me detengo.
+No porque espere que vuelvas.
+No porque quiera volver yo.
+No porque necesite entenderlo.
+Solo porque lo reconozco.
+Durante mucho tiempo
+creí que reconocer algo
+era saber de dónde venía.
+Ahora no.
+A veces basta con saber
+que alguna vez lo viste.
+La tarde sigue cayendo.
+La calle sigue siendo la misma.
+El mapa sigue guardado
+donde lo dejé.
+Y el color permanece apenas
+un segundo más
+antes de mezclarse con la noche.
+Me quedo mirando.
+Después,
+sigo caminando.
+
+    `
+  }
+
+
+
 ];
 
 /* -----------------------------
