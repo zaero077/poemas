@@ -1099,7 +1099,7 @@ En los registros aparecen
 La misma secuencia produce
 resultados diferentes.
 ...` // NOTE: poem 13 is long; in your local copy ensure the full content from your original file is pasted here exactly (it continues in the original text).
-  }
+  },
  {
     title: "Poema número 14",
     text: `En Villa Serrana
@@ -1165,7 +1165,7 @@ Antes de volver,
 
 
     `
-  }
+  },
     
     {
     title: "Poema número 15",
@@ -1454,7 +1454,7 @@ Especialmente el silencio.
 
 
     `
-  }
+  },
 {
     title: "Poema número 16",
     text: `En Minas
@@ -1565,7 +1565,7 @@ debajo de nuestras manos
 
 
     `
-  }
+  },
 {
     title: "Poema número 17",
     text: `Todavía no te moviste
@@ -1698,7 +1698,7 @@ en desaparecer.
 
 
     `
-  }
+  },
 
 {
     title: "Poema número 18",
@@ -1957,7 +1957,7 @@ Quizá me sobraba conciencia.
 
 
     `
-  }
+  },
 
 {
     title: "Poema número 19",
@@ -2161,7 +2161,7 @@ un universo entero.
 
 
     `
-  }
+  },
 
 {
     title: "Poema número 20",
