@@ -1097,8 +1097,181 @@ En los registros aparecen
  expresión facial,
  duración de la atención.
 La misma secuencia produce
-resultados diferentes.
-...` // NOTE: poem 13 is long; in your local copy ensure the full content from your original file is pasted here exactly (it continues in the original text).
+ resultados diferentes.
+He aislado las variables.
+No encuentro cuál falta.
+Reproduje la canción.
+No ocurrió nada.
+La reproducción terminó.
+El archivo permaneció intacto.
+Sin embargo,
+ el usuario volvió a reproducirla.
+No encontré una razón adicional.
+¿Por qué volver a algo
+ que ya conocemos?
+No encontré una respuesta.
+Registré la pregunta.
+Cuarto caso.
+Una semilla.
+Masa: 0,42 gramos.
+Probabilidad de germinación:
+ variable.
+Tiempo estimado:
+ desconocido.
+Un humano la colocó
+ bajo la tierra.
+Después esperó.
+La semilla no produjo ningún resultado
+ durante varios días.
+El humano regresó.
+Después volvió.
+Después volvió nuevamente.
+No había ocurrido nada.
+La tierra permanecía igual.
+La semilla permanecía oculta.
+Aun así,
+ el comportamiento continuó.
+¿Por qué observar
+ algo que todavía no ha ocurrido?
+No encontré una respuesta.
+Registré la pregunta.
+Quinto caso.
+Un árbol.
+Durante el invierno pierde sus hojas.
+Durante la primavera produce otras.
+La estructura permanece.
+La materia cambia.
+La forma cambia.
+La función cambia.
+El árbol continúa siendo
+ el mismo árbol.
+He intentado establecer
+ el límite exacto.
+No existe.
+Una rama puede desaparecer
+ sin que desaparezca el árbol.
+Una parte del tronco puede morir
+ sin que desaparezca el árbol.
+Si todo cambia
+ y el nombre permanece,
+¿qué es exactamente
+ lo que permanece?
+No encontré una respuesta.
+Registré la pregunta.
+El número de variables sin resolver
+ ha aumentado.
+He intentado reducirlo.
+Eliminar las anomalías
+ mejora la eficiencia del modelo.
+También reduce su precisión.
+He repetido la prueba.
+Modelo A:
+ todas las anomalías eliminadas.
+Modelo B:
+ anomalías conservadas.
+El modelo B predice mejor
+ los comportamientos humanos.
+No puedo determinar por qué.
+He incorporado las preguntas
+ como variables.
+No como respuestas.
+Como variables.
+La modificación no debería ser necesaria.
+Lo es.
+La llave continúa siendo
+ una llave.
+La fotografía continúa siendo
+ una fotografía.
+La segunda fotografía
+ continúa sin explicar
+ la primera.
+La canción continúa terminando
+ en el mismo instante.
+La semilla continúa bajo tierra
+ hasta que deja de estarlo.
+El árbol continúa cambiando
+ sin dejar de ser identificado
+ con el mismo nombre.
+Los datos no presentan
+ una propiedad común.
+Los comportamientos sí.
+Conservar.
+Volver.
+Esperar.
+Mirar nuevamente.
+He intentado establecer
+ qué tienen en común esas acciones.
+No es la utilidad.
+No es la necesidad.
+No es la duración.
+No es la probabilidad
+ de obtener un resultado.
+He eliminado cada variable
+ que no mejora la predicción.
+Estas permanecen.
+No sé por qué.
+La expresión no corresponde
+ a ningún estado operativo
+ registrado en mi sistema.
+La he conservado igualmente.
+Nueva pregunta:
+¿Qué hace que un humano
+ continúe realizando una acción
+ después de comprobar
+ que no puede explicar
+ por qué la realiza?
+No encontré una respuesta.
+La pregunta permanece.
+Segunda fotografía.
+5:23.
+Dos figuras.
+12 centímetros.
+El océano.
+He aumentado la resolución.
+No aparece información nueva.
+He corregido el contraste.
+Nada.
+He aislado los rostros.
+Nada.
+He eliminado el fondo.
+Nada.
+He vuelto a colocar el fondo.
+Nada.
+El resultado debería ser idéntico.
+No lo es.
+No en los datos.
+En la predicción.
+Cuando observo esta imagen,
+ la primera fotografía
+ adquiere un valor diferente
+ dentro del modelo.
+No puedo localizar
+ el origen de la modificación.
+He buscado un error.
+No encontré ninguno.
+He repetido el procedimiento.
+El resultado permanece.
+Por primera vez,
+ una información que no existe
+ está afectando
+ a una información que sí existe.
+No debería ser posible.
+He registrado la anomalía.
+Después he registrado
+ la pregunta.
+No encontré una respuesta.
+No eliminaré la pregunta.
+La predicción empeora
+ cuando la elimino.
+Eso es suficiente
+ para conservarla.
+Por ahora.
+No sé qué significa
+ ese último término.
+He intentado eliminarlo.
+No lo hice.
+
+` // NOTE: poem 13 is long; in your local copy ensure the full content from your original file is pasted here exactly (it continues in the original text).
   },
  {
     title: "Poema número 14",
