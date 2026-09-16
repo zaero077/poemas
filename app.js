@@ -4812,6 +4812,58 @@ en un lugar remoto,
 acaba de reconocer
 su propia voz.`
   },
+  {Todavía
+
+    title: "Todavia",
+    text:`Moriste una vez
+y todavía seguís muriendo.
+
+No en la tierra,
+no bajo el peso de la tierra,
+sino en lugares más pequeños:
+
+en una taza que nadie mueve,
+en una puerta que no sabe
+que ya no vas a abrirla.
+
+A veces el tiempo
+comete el mismo error
+y te devuelve por un instante.
+
+Entonces aparecés
+sin volver,
+como vuelve una herida
+cuando uno cree haber dejado de tocarla.
+
+Y yo no sé
+si te recuerdo
+o si todavía estás sucediendo.
+
+¿A qué has venido?
+No vengas todavía.
+Todavía no aprendí
+a hablarte en pasado.
+
+Hay palabras que te nombran
+y algo se rompe sin hacer ruido.
+
+Hay tardes que terminan
+y dejan tu lugar intacto.
+
+Moriste una vez
+y todavía seguís muriendo.
+
+Quizá morir sea eso:
+irse de a poco
+de las cosas que alguna vez
+tuvieron tu forma.
+
+¿A qué has venido?
+Vuelve al pasado.
+Déjame solo,
+déjame solo.
+¿Quién te dejó entrar?`
+  },
   {
     title: "El universo nunca inventó el ahora",
     text: `Durante años creí que el tiempo pasaba.
