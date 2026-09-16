@@ -4812,7 +4812,7 @@ en un lugar remoto,
 acaba de reconocer
 su propia voz.`
   },
-  {Todavía
+  {
 
     title: "Todavia",
     text:`Moriste una vez
@@ -4840,7 +4840,6 @@ si te recuerdo
 o si todavía estás sucediendo.
 
 ¿A qué has venido?
-No vengas todavía.
 Todavía no aprendí
 a hablarte en pasado.
 
@@ -4853,10 +4852,15 @@ y dejan tu lugar intacto.
 Moriste una vez
 y todavía seguís muriendo.
 
-Quizá morir sea eso:
-irse de a poco
-de las cosas que alguna vez
-tuvieron tu forma.
+A veces te olvido muerta.
+Te pienso en una tarde cualquiera,
+te imagino llegando,
+y por un instante
+la muerte deja de ser verdad.
+
+Después me acuerdo.
+
+Y volvés a morir.
 
 ¿A qué has venido?
 Vuelve al pasado.
